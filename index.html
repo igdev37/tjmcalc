@@ -10,10 +10,10 @@
 <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
-<link rel="canonical" href="https://tjmcalc.fr/">
+<link rel="canonical" href="https://tjmcalc.com/">
 <meta property="og:title" content="Simulateur TJM → Salaire Net Freelance">
 <meta property="og:description" content="Calculez en 10 secondes votre revenu net freelance ou indépendant à partir de votre TJM, quels que soient votre activité et votre statut.">
-<meta property="og:url" content="https://tjmcalc.fr/">
+<meta property="og:url" content="https://tjmcalc.com/">
 <meta property="og:site_name" content="TJM Calc">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
@@ -362,7 +362,7 @@
 
 <!-- En-tête imprimable uniquement (voir @media print) -->
 <div id="print-header">
-  <p class="print-brand">TJM<span>Calc</span> — tjmcalc.fr</p>
+  <p class="print-brand">TJM<span>Calc</span> — tjmcalc.com</p>
   <h2>Simulation de revenu freelance</h2>
   <p id="print-params"></p>
   <p id="print-date"></p>
@@ -1407,7 +1407,7 @@
       modeSuffix = ' · TJM calculé pour ' + formatEuros(Number(revenuCibleInput.value) || 0) + ' de ' + basisLabel + '/mois';
     }
     printParams.textContent = 'TJM : ' + formatEuros(tjm) + ' · ' + jours + ' jours/mois · ' + activiteLabel + ' · ' + statutLabel + modeSuffix;
-    printDate.textContent = 'Simulation générée le ' + new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' sur tjmcalc.fr';
+    printDate.textContent = 'Simulation générée le ' + new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' sur tjmcalc.com';
   }
 
   function getFiscalParams() {
@@ -1660,10 +1660,10 @@
         footerContainer.innerHTML = '';
         var p = document.createElement('p');
         var a = document.createElement('a');
-        a.href = 'https://tjmcalc.fr';
+        a.href = 'https://tjmcalc.com';
         a.target = '_blank';
         a.rel = 'noopener';
-        a.textContent = 'TJMCalc.fr';
+        a.textContent = 'TJMCalc.com';
         p.appendChild(document.createTextNode('Simulateur fourni par '));
         p.appendChild(a);
         p.appendChild(document.createTextNode(' — estimation pédagogique, hors conseil personnalisé.'));
@@ -1673,7 +1673,7 @@
   }
 
   function buildEmbedSnippet() {
-    return '<iframe src="https://tjmcalc.fr/?embed=1" width="100%" height="900" style="border:0;border-radius:12px;max-width:640px" loading="lazy" title="Simulateur TJM vers salaire net freelance"></iframe>';
+    return '<iframe src="https://tjmcalc.com/?embed=1" width="100%" height="900" style="border:0;border-radius:12px;max-width:640px" loading="lazy" title="Simulateur TJM vers salaire net freelance"></iframe>';
   }
 
   if (embedCodeText) embedCodeText.textContent = buildEmbedSnippet();
