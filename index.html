@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulateur TJM → Salaire Net Freelance | Calcul Gratuit</title>
+<meta name="description" content="Calculez en 10 secondes votre revenu net freelance ou indépendant à partir de votre TJM. Simulateur gratuit : plus de 60 activités, micro-entreprise, société, portage salarial.">
+<meta name="keywords" content="calcul salaire freelance, combien gagne un freelance, simulateur tjm net, convertir tjm en salaire, tjm freelance, salaire net freelance">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<link rel="canonical" href="https://tjmcalc.fr/">
+<meta property="og:title" content="Simulateur TJM → Salaire Net Freelance">
+<meta property="og:description" content="Calculez en 10 secondes votre revenu net freelance ou indépendant à partir de votre TJM, quels que soient votre activité et votre statut.">
+<meta property="og:url" content="https://tjmcalc.fr/">
+<meta property="og:site_name" content="TJM Calc">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulateur TJM → Salaire Net Freelance">
+<meta name="twitter:description" content="Calculez en 10 secondes votre revenu net freelance ou indépendant à partir de votre TJM.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzBGMTcyQSIvPjx0ZXh0IHg9IjMyIiB5PSI0MyIgZm9udC1mYW1pbHk9InVpLW1vbm9zcGFjZSwgTWVubG8sIG1vbm9zcGFjZSIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzA1OTY2OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+4oKsPC90ZXh0Pjwvc3ZnPg==">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Qu’est-ce que le TJM (Taux Journalier Moyen) ?", "acceptedAnswer": { "@type": "Answer", "text": "Le TJM est le montant facturé par un freelance ou un indépendant pour une journée de travail. Il doit couvrir non seulement le temps de travail effectif, mais aussi le temps non facturable : prospection, administratif, formation et congés, contrairement à un salaire journalier en CDI." } },
+    { "@type": "Question", "name": "Ce simulateur est-il fiable à 100% ?", "acceptedAnswer": { "@type": "Answer", "text": "Ce simulateur donne une estimation pédagogique basée sur des taux de charges moyens par statut et par activité. Votre situation réelle peut faire varier le résultat. Pour un calcul exact, consultez un expert-comptable." } },
+    { "@type": "Question", "name": "Comment calculer son salaire net en freelance ?", "acceptedAnswer": { "@type": "Answer", "text": "Le calcul tient en trois étapes : le revenu brut mensuel (TJM multiplié par le nombre de jours facturés), puis les charges sociales et fiscales liées au statut et à l'activité (entre 12% et 55% selon les cas), ce qui donne le revenu net réellement perçu." } },
+    { "@type": "Question", "name": "TJM vs salaire net : convertir son taux journalier", "acceptedAnswer": { "@type": "Answer", "text": "Une erreur fréquente consiste à multiplier son TJM par 20 jours et par 12 mois. En réalité, un indépendant facture rarement plus de 15 à 19 jours par mois, le reste étant consacré à la prospection, à l'administratif, à la formation et aux congés non rémunérés." } },
+    { "@type": "Question", "name": "Micro-entreprise, société ou portage salarial : quel statut choisir ?", "acceptedAnswer": { "@type": "Answer", "text": "La micro-entreprise offre une gestion simplifiée avec des charges de 12,3% à 25,6% selon l'activité. Les sociétés (EURL, SARL, SASU, SAS...) permettent plus d'optimisation avec environ 42% de charges en gérance TNS contre environ 55% en présidence assimilée salarié. Le portage salarial offre le statut de salarié avec des frais de gestion de 50% à 55%." } },
+    { "@type": "Question", "name": "Faut-il payer la CFE (Cotisation Foncière des Entreprises) ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans la quasi-totalité des cas : la CFE est due par tous les indépendants et sociétés dès la deuxième année d'activité, y compris en micro-entreprise. Son montant forfaitaire dépend de la commune et du chiffre d'affaires, généralement entre 100 € et 800 € par an." } }
+  ]
+}
+</script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --slate-50:#f8fafc; --slate-100:#f1f5f9; --slate-200:#e2e8f0; --slate-300:#cbd5e1;
+    --slate-400:#94a3b8; --slate-500:#64748b; --slate-600:#475569; --slate-700:#334155; --slate-900:#0f172a;
+    --emerald-50:#ecfdf5; --emerald-400:#34d399; --emerald-500:#10b981; --emerald-600:#059669; --emerald-700:#047857;
+    --amber-400:#fbbf24; --amber-600:#d97706; --amber-700:#b45309;
+    --rose-500:#f43f5e; --rose-700:#be123c;
+    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+
+    /* Jetons sémantiques : ce sont ces variables (et non les couleurs slate/emerald
+       brutes ci-dessus) qui doivent être utilisées pour le texte, les fonds et les
+       bordures, afin que le mode sombre ci-dessous puisse les redéfinir proprement. */
+    --page-bg:#fff;
+    --surface:#fff;
+    --surface-alt:var(--slate-50);
+    --surface-hover:var(--slate-100);
+    --header-bg:rgba(255,255,255,.8);
+    --text-primary:var(--slate-900);
+    --text-strong:var(--slate-700);
+    --text-secondary:var(--slate-600);
+    --text-muted:var(--slate-500);
+    --text-faint:var(--slate-400);
+    --border:var(--slate-200);
+    --border-soft:var(--slate-100);
+    --border-strong:var(--slate-300);
+    --shadow-card:0 1px 2px rgba(0,0,0,.04);
+    --alert-warn-bg:#fffbeb; --alert-warn-border:#fde68a;
+    --alert-info-bg:#eff6ff; --alert-info-border:#bfdbfe; --alert-info-text:#1d4ed8; --alert-info-icon:#2563eb;
+  }
+  @media (prefers-color-scheme:dark) {
+    :root {
+      --page-bg:#0a0f1a;
+      --surface:#131b2c;
+      --surface-alt:#0f1626;
+      --surface-hover:#1a2338;
+      --header-bg:rgba(10,15,26,.85);
+      --text-primary:#f1f5f9;
+      --text-strong:#e2e8f0;
+      --text-secondary:#cbd5e1;
+      --text-muted:#94a3b8;
+      --text-faint:#64748b;
+      --border:#26314a;
+      --border-soft:#1c2540;
+      --border-strong:#3a4a6b;
+      --shadow-card:0 1px 3px rgba(0,0,0,.4);
+      --emerald-50:#0d2b22; --emerald-700:#34d399;
+      --amber-700:#fbbf24;
+      --rose-700:#fb7185;
+      --alert-warn-bg:#2a2110; --alert-warn-border:#5c4813;
+      --alert-info-bg:#12233d; --alert-info-border:#1e3a5f; --alert-info-text:#93c5fd; --alert-info-icon:#60a5fa;
+    }
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; background:var(--page-bg); overflow-x:hidden; }
+  body { margin:0; min-height:100dvh; background:var(--page-bg); color:var(--text-primary); font-family:var(--font-sans); -webkit-font-smoothing:antialiased; overflow-x:hidden; transition:background-color .2s, color .2s; }
+  @media (prefers-reduced-motion:reduce){ *,*::before,*::after{ animation-duration:.01ms!important; transition-duration:.01ms!important; } }
+  :focus-visible { outline:2px solid var(--emerald-600); outline-offset:2px; }
+  .icon { width:1rem; height:1rem; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+
+  .container { max-width:64rem; margin:0 auto; padding:0 1rem; }
+  @media (min-width:640px){ .container{ padding:0 1.5rem; } }
+
+  header.site { border-bottom:1px solid var(--border); background:var(--header-bg); backdrop-filter:blur(6px); }
+  header.site .container { display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+  .brand { font-family:var(--font-mono); font-weight:700; font-size:1rem; color:var(--text-primary); text-decoration:none; }
+  .brand em { color:var(--emerald-600); font-style:normal; }
+  .header-tag { font-size:.875rem; color:var(--text-muted); }
+  @media (max-width:639px){ .header-tag{ display:none; } }
+
+  .hero { padding-top:2.5rem; padding-bottom:1.5rem; }
+  @media (min-width:640px){ .hero{ padding-top:4rem; padding-bottom:2.5rem; } }
+  .eyebrow { font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--emerald-600); margin:0; }
+  h1 { font-size:1.875rem; font-weight:700; letter-spacing:-.02em; margin:.5rem 0 0; }
+  @media (min-width:640px){ h1{ font-size:2.25rem; } }
+  .subtitle { margin:.75rem 0 0; max-width:42rem; color:var(--text-secondary); font-size:1rem; line-height:1.5; }
+  @media (min-width:640px){ .subtitle{ font-size:1.125rem; } }
+
+  .card { min-width:0; border:1px solid var(--border); background:var(--surface); border-radius:1rem; padding:1.5rem; box-shadow:var(--shadow-card); }
+  @media (min-width:640px){ .card{ padding:2rem; } }
+  .card h2 { font-size:1.125rem; font-weight:600; margin:0; }
+
+  .sim-grid { display:grid; gap:1.5rem; padding:0 0 2.5rem; }
+  @media (min-width:1024px){ .sim-grid{ grid-template-columns:1fr 1fr; align-items:start; gap:2rem; } }
+
+  .field { margin-top:1.5rem; }
+  .field:first-child { margin-top:0; }
+  label, legend { font-size:.875rem; font-weight:500; color:var(--text-strong); }
+  .label-with-tooltip { display:flex; align-items:center; gap:.375rem; flex-wrap:wrap; }
+  .field-hint { margin:.375rem 0 0; font-size:.75rem; color:var(--text-faint); line-height:1.4; }
+  .checkbox-row { display:flex; align-items:center; gap:.5rem; cursor:pointer; }
+  .checkbox-row input[type="checkbox"] { width:1rem; height:1rem; flex-shrink:0; accent-color:var(--emerald-600); cursor:pointer; }
+  .checkbox-row span { font-size:.875rem; font-weight:500; color:var(--text-strong); }
+
+  /* Accordéon "Options fiscales (optionnel)" à l'intérieur du bloc Vos paramètres */
+  .field-accordion { margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--border-soft); }
+  .field-accordion-summary { display:flex; align-items:center; justify-content:space-between; gap:.75rem; cursor:pointer; list-style:none; font-size:.875rem; font-weight:600; color:var(--text-strong); }
+  .field-accordion-summary::-webkit-details-marker { display:none; }
+  .field-accordion-summary .icon { transition:transform .2s; color:var(--text-faint); }
+  .field-accordion[open] .field-accordion-summary .icon { transform:rotate(180deg); }
+  .field-accordion-body { margin-top:1.25rem; }
+  .field-accordion-body .field:first-child { margin-top:0; }
+
+  /* min-width:0 sur toute la chaîne flex : par défaut, un enfant flex refuse de
+     rétrécir sous la taille de son contenu ("min-width:auto"). Sans ce correctif,
+     un TJM à 5-6 chiffres peut forcer #tjm-number, puis .tjm-box/.tjm-stepper/.tjm-row,
+     puis la carte elle-même à s'élargir - et avec elle toute la page. Avec
+     min-width:0, le nombre défile simplement dans sa petite case au lieu de
+     pousser la mise en page. */
+  .tjm-row { display:flex; align-items:center; justify-content:space-between; gap:.75rem; min-width:0; }
+  .tjm-stepper { display:flex; align-items:center; gap:.375rem; min-width:0; }
+  .tjm-step-btn { display:flex; align-items:center; justify-content:center; width:1.75rem; height:1.75rem; flex-shrink:0; border:1px solid var(--border-strong); background:var(--surface); color:var(--text-strong); border-radius:.5rem; font-family:inherit; font-size:1rem; line-height:1; cursor:pointer; transition:background-color .15s, border-color .15s, color .15s; }
+  .tjm-step-btn:hover { background:var(--surface-hover); border-color:var(--emerald-600); color:var(--emerald-700); }
+  .tjm-step-btn:active { transform:translateY(1px); }
+  .tjm-box { display:flex; align-items:center; gap:.25rem; border:1px solid var(--border-strong); border-radius:.5rem; padding:.375rem .625rem; min-width:0; }
+  .tjm-box input { width:5rem; min-width:0; border:none; background:transparent; text-align:right; font-family:var(--font-mono); font-size:.875rem; font-weight:600; color:var(--text-primary); }
+  .tjm-box input:focus { outline:none; }
+  .tjm-box span { font-size:.875rem; color:var(--text-muted); flex-shrink:0; }
+  input[type="range"] { width:100%; margin-top:.75rem; accent-color:var(--emerald-600); cursor:pointer; }
+
+  /* Bascule "TJM -> Net" / "Net visé -> TJM" en tête du bloc Vos paramètres,
+     même langage visuel que les onglets du bloc Résultats. */
+  .mode-tabs { display:flex; gap:.25rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border-soft); }
+  .mode-tab-btn { flex:1 1 auto; border:none; background:none; padding:0 .25rem .75rem; margin-bottom:-1px; border-bottom:2px solid transparent; font-family:inherit; font-size:.8125rem; font-weight:600; color:var(--text-muted); cursor:pointer; transition:color .15s, border-color .15s; }
+  .mode-tab-btn:hover { color:var(--text-strong); }
+  .mode-tab-btn.is-active { color:var(--emerald-700); border-color:var(--emerald-600); }
+
+  /* Calcul inversé : choix de la base (net avant/après impôt) et TJM résultat */
+  .cible-basis-row { display:flex; gap:.5rem; margin-top:.75rem; flex-wrap:wrap; }
+  .radio-pill { display:flex; align-items:center; gap:.375rem; border:1px solid var(--border-strong); border-radius:9999px; padding:.3125rem .75rem; font-size:.8125rem; font-weight:500; color:var(--text-strong); cursor:pointer; transition:border-color .15s, background-color .15s, color .15s; }
+  .radio-pill input { accent-color:var(--emerald-600); width:.875rem; height:.875rem; margin:0; cursor:pointer; }
+  .radio-pill.is-checked { border-color:var(--emerald-600); background:var(--emerald-50); color:var(--emerald-700); }
+  .tjm-requis-callout { margin-top:1rem; padding:.75rem .875rem; border-radius:.625rem; background:var(--surface-alt); border:1px solid var(--border-soft); }
+  .tjm-requis-callout .lbl { margin:0; font-size:.75rem; font-weight:500; color:var(--text-muted); }
+  .tjm-requis-callout .val { margin:.25rem 0 0; font-family:var(--font-mono); font-size:1.375rem; font-weight:700; color:var(--emerald-700); overflow-wrap:break-word; }
+
+  input[type="number"].field-input, select {
+    width:100%; margin-top:.5rem; border:1px solid var(--border-strong); border-radius:.5rem;
+    padding:.5rem .75rem; font-family:var(--font-mono); font-size:.875rem; color:var(--text-primary); background:var(--surface);
+  }
+  select { font-family:var(--font-sans); appearance:none; padding-right:2.25rem; }
+  input[type="number"].field-input:focus, select:focus { border-color:var(--emerald-600); outline:none; }
+  .select-wrap { position:relative; }
+  .select-wrap .icon { position:absolute; right:.75rem; top:50%; transform:translateY(-50%); color:var(--text-faint); pointer-events:none; }
+
+  /* Waterfall */
+  .waterfall-label { font-size:.75rem; font-weight:500; text-transform:uppercase; letter-spacing:.05em; color:var(--text-faint); margin:0; }
+  .wf-line { display:flex; align-items:baseline; justify-content:space-between; gap:.75rem; padding:.375rem 0; min-width:0; }
+  .wf-line .lbl { display:flex; align-items:center; gap:.375rem; font-size:.875rem; min-width:0; }
+  .wf-line .val { font-family:var(--font-mono); font-size:.875rem; flex-shrink:0; }
+  .tone-muted .lbl, .tone-muted .val { color:var(--text-muted); }
+  .tone-strong .lbl, .tone-strong .val { color:var(--text-primary); }
+  .tone-amber .lbl, .tone-amber .val { color:var(--amber-700); }
+  .tone-rose .lbl, .tone-rose .val { color:var(--rose-700); }
+  .bar { display:flex; height:.5rem; overflow:hidden; border-radius:9999px; background:var(--surface-hover); margin:.75rem 0; }
+  .bar > span { display:block; height:100%; transition:width .3s; }
+  .bar .b-net { background:var(--emerald-500); }
+  .bar .b-charges { background:var(--amber-400); }
+  .bar .b-impot { background:var(--rose-500); }
+  .bar .b-frais { background:var(--slate-300); }
+  .wf-divider { border-top:1px dashed var(--border); }
+  .hero-result { margin-top:1.25rem; }
+  .hero-result p.lbl { margin:0; display:flex; align-items:center; flex-wrap:wrap; font-size:.8125rem; font-weight:500; color:var(--text-muted); }
+  .hero-result p.val { margin:.25rem 0 0; font-family:var(--font-mono); font-size:2rem; font-weight:700; color:var(--emerald-700); overflow-wrap:break-word; }
+  @media (min-width:640px){ .hero-result p.val{ font-size:2.5rem; } }
+  .hero-result-badge { font-size:.625rem; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--text-faint); margin-left:.25rem; }
+  .hero-result-note { margin:.875rem 0 0; font-size:.75rem; color:var(--text-faint); line-height:1.5; }
+  .hero-result-note a { color:var(--emerald-600); font-weight:500; }
+  .mini-stats { margin-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:.75rem; border-top:1px solid var(--border-soft); padding-top:1.5rem; }
+  .mini-stat { min-width:0; background:var(--surface-alt); border-radius:.75rem; padding:.875rem; }
+  .mini-stat .lbl { display:flex; align-items:center; gap:.375rem; font-size:.75rem; font-weight:500; color:var(--text-muted); }
+  .mini-stat .val { margin:.25rem 0 0; font-family:var(--font-mono); font-size:1.125rem; font-weight:600; color:var(--text-primary); overflow-wrap:break-word; }
+
+  /* Alerte plafond micro-entreprise */
+  .alert-plafond { display:none; align-items:flex-start; gap:.5rem; margin-top:1.25rem; padding:.75rem .875rem; border-radius:.625rem; background:var(--alert-warn-bg); border:1px solid var(--alert-warn-border); }
+  .alert-plafond .icon { color:var(--amber-600); margin-top:.125rem; }
+  .alert-plafond p { margin:0; font-size:.8125rem; line-height:1.5; color:var(--amber-700); }
+
+  /* Alerte franchise TVA (informative, distincte de l'alerte plafond) */
+  .alert-info { display:none; align-items:flex-start; gap:.5rem; margin-top:1rem; padding:.75rem .875rem; border-radius:.625rem; background:var(--alert-info-bg); border:1px solid var(--alert-info-border); }
+  .alert-info .icon { color:var(--alert-info-icon); margin-top:.125rem; }
+  .alert-info p { margin:0; font-size:.8125rem; line-height:1.5; color:var(--alert-info-text); }
+
+  /* Bandeau "objectif" affiché en mode calcul inversé, en tête des résultats */
+  .alert-goal { display:none; align-items:flex-start; gap:.5rem; margin:0 0 1.25rem; padding:.75rem .875rem; border-radius:.625rem; background:var(--emerald-50); border:1px solid var(--emerald-500); }
+  .alert-goal .icon { color:var(--emerald-600); margin-top:.125rem; }
+  .alert-goal p { margin:0; font-size:.8125rem; line-height:1.5; color:var(--emerald-700); }
+
+  /* Actions : partage & export */
+  .action-row { display:flex; flex-wrap:wrap; gap:.625rem; margin-top:1.25rem; }
+  .btn-outline { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; flex:1 1 auto; border:1px solid var(--border); background:var(--surface); color:var(--text-strong); border-radius:.5rem; padding:.5rem .875rem; font-family:inherit; font-size:.8125rem; font-weight:500; cursor:pointer; transition:background-color .15s, border-color .15s, color .15s; }
+  .btn-outline:hover { background:var(--surface-alt); border-color:var(--emerald-600); color:var(--emerald-700); }
+  .btn-outline .icon { width:.875rem; height:.875rem; transition:color .15s; }
+  .btn-outline.is-copied { border-color:var(--emerald-600); color:var(--emerald-700); background:var(--emerald-50); }
+  .btn-outline.is-copied .icon { color:var(--emerald-600); }
+
+  /* En-tête imprimable (masqué à l'écran, affiché seulement au print) */
+  #print-header { display:none; }
+
+  /* Tooltip */
+  .tooltip { position:relative; display:inline-block; vertical-align:middle; }
+  .tooltip summary { list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:center; height:1rem; width:1rem; }
+  .tooltip summary::-webkit-details-marker { display:none; }
+  .tooltip summary .icon { color:var(--text-faint); }
+  .tooltip[open] summary .icon { color:var(--emerald-600); }
+  .tooltip-content { position:absolute; left:50%; top:1.5rem; transform:translateX(-50%); width:13rem; max-width:calc(100vw - 2.5rem); z-index:20; border-radius:.5rem; background:var(--slate-900); color:#f1f5f9; padding:.625rem; font-size:.75rem; line-height:1.5; box-shadow:0 10px 15px rgba(0,0,0,.15); }
+
+  /* Simulation fiscale avancée (impôt, TVA, charges détaillées) — gratuit, aucune limitation */
+  .fiscal-card { margin:2rem 0; }
+  .fiscal-card > h2 { font-size:1.125rem; font-weight:600; margin:0; }
+  .fiscal-card .field-hint { margin-top:.375rem; }
+  .fiscal-inline-group { display:grid; gap:1rem; grid-template-columns:1fr; }
+  @media (min-width:560px){ .fiscal-inline-group{ grid-template-columns:1fr 1fr; } }
+  .fiscal-inline-group .field { margin-top:0; }
+  .fiscal-section-title { display:flex; align-items:center; gap:.5rem; font-size:.8125rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--emerald-600); margin:1.75rem 0 0; }
+  .fiscal-section-title:first-of-type { margin-top:1.75rem; }
+  .fiscal-breakdown-list { margin-top:.875rem; display:flex; flex-direction:column; gap:0; border:1px solid var(--border-soft); border-radius:.75rem; overflow:hidden; }
+  .fiscal-breakdown-row { display:flex; align-items:baseline; justify-content:space-between; gap:.75rem; padding:.625rem .875rem; font-size:.8125rem; background:var(--surface-alt); }
+  .fiscal-breakdown-row:nth-child(even) { background:var(--surface); }
+  .fiscal-breakdown-row .lbl { color:var(--text-secondary); }
+  .fiscal-breakdown-row .pct { color:var(--text-faint); font-family:var(--font-mono); font-size:.75rem; }
+  .fiscal-breakdown-row .val { font-family:var(--font-mono); font-weight:600; color:var(--text-primary); white-space:nowrap; }
+  .fiscal-line { display:flex; align-items:baseline; justify-content:space-between; gap:.75rem; padding:.5rem 0; font-size:.875rem; min-width:0; }
+  .fiscal-line .lbl { color:var(--text-secondary); display:flex; align-items:center; gap:.375rem; min-width:0; }
+  .fiscal-line .val { font-family:var(--font-mono); color:var(--text-primary); flex-shrink:0; }
+  .fiscal-line.tone-amber .val { color:var(--amber-700); }
+  .fiscal-divider { border-top:1px dashed var(--border); margin:.25rem 0; }
+  .fiscal-net-hero { border-radius:1rem; background:var(--slate-900); color:#fff; padding:1.25rem 1.5rem; margin-top:1.25rem; }
+  .fiscal-net-hero p.lbl { margin:0; font-size:.8125rem; font-weight:500; color:var(--slate-400); }
+  .fiscal-net-hero p.val { margin:.25rem 0 0; font-family:var(--font-mono); font-size:1.875rem; font-weight:700; color:var(--emerald-400); overflow-wrap:break-word; }
+  .fiscal-note { margin:.75rem 0 0; font-size:.75rem; color:var(--text-faint); line-height:1.5; }
+
+  /* Comparateur de statuts (intégré comme second onglet du bloc Résultats) */
+  .comparator-list { margin-top:1rem; display:flex; flex-direction:column; gap:.5rem; }
+  .comparator-row { display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.625rem .75rem; border-radius:.5rem; background:var(--surface-alt); font-size:.875rem; border:none; width:100%; min-width:0; text-align:left; font-family:inherit; cursor:pointer; transition:background .15s; }
+  .comparator-row:hover { background:var(--surface-hover); }
+  .comparator-row.is-current { background:var(--emerald-50); box-shadow:inset 0 0 0 1px var(--emerald-500); }
+  .comparator-row.is-current:hover { background:var(--emerald-50); }
+  .comparator-row .name { color:var(--text-strong); font-weight:500; min-width:0; overflow-wrap:break-word; }
+  .comparator-row .value { font-family:var(--font-mono); font-weight:600; color:var(--text-primary); flex-shrink:0; }
+
+  /* Onglets du bloc Résultats : "Mon statut" / "Comparatif global" */
+  .results-tabs { display:flex; gap:.25rem; margin-bottom:1.25rem; border-bottom:1px solid var(--border-soft); }
+  .results-tab-btn { flex:1 1 auto; border:none; background:none; padding:0 .25rem .75rem; margin-bottom:-1px; border-bottom:2px solid transparent; font-family:inherit; font-size:.8125rem; font-weight:600; color:var(--text-muted); cursor:pointer; transition:color .15s, border-color .15s; }
+  .results-tab-btn:hover { color:var(--text-strong); }
+  .results-tab-btn.is-active { color:var(--emerald-700); border-color:var(--emerald-600); }
+
+  /* Widget embarquable */
+  .embed-section { margin-top:1rem; }
+  .embed-code-box { margin-top:.75rem; border:1px solid var(--border); border-radius:.5rem; background:var(--surface-alt); padding:.75rem; overflow-x:auto; }
+  .embed-code-box code { font-family:var(--font-mono); font-size:.75rem; color:var(--text-strong); white-space:pre; }
+
+  /* Mode embarqué (?embed=1) : on n'affiche que le formulaire et le résultat,
+     pour un rendu compact dans un <iframe> tiers. */
+  body.is-embed header.site, body.is-embed .hero, body.is-embed .results-tabs,
+  body.is-embed .mode-tabs, body.is-embed [data-tab-panel="comparator"],
+  body.is-embed .fiscal-card, body.is-embed .embed-section,
+  body.is-embed .faq, body.is-embed .action-row { display:none !important; }
+  body.is-embed .sim-grid { padding-bottom:1rem; }
+  body.is-embed footer.site { padding:.75rem 0; }
+  body.is-embed footer.site p { font-size:.6875rem; }
+
+  /* SEO */
+
+  /* FAQ */
+  .faq { border-top:1px solid var(--border); padding:2.5rem 0; }
+  @media (min-width:640px){ .faq{ padding:3.5rem 0; } }
+  .faq > h2 { font-size:1.5rem; font-weight:600; margin:0; }
+  .faq-list { margin-top:1.5rem; border:1px solid var(--border); border-radius:1rem; background:var(--surface); overflow:hidden; }
+  .faq-item { padding:1.25rem; border-top:1px solid var(--border); }
+  .faq-item:first-child { border-top:none; }
+  .faq-item summary { cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:.875rem; font-weight:500; color:var(--text-primary); }
+  .faq-item summary::-webkit-details-marker { display:none; }
+  .faq-item .icon { transition:transform .2s; color:var(--text-faint); }
+  .faq-item[open] .icon { transform:rotate(180deg); }
+  .faq-item p { margin:.75rem 0 0; font-size:.875rem; color:var(--text-secondary); line-height:1.6; }
+
+  footer.site { padding:2.5rem 0; }
+  footer.site p { margin:0; font-size:.75rem; line-height:1.6; color:var(--text-faint); }
+
+  /* Mode sombre : géré nativement via color-scheme + les jetons ci-dessus
+     (voir le bloc @media (prefers-color-scheme:dark) sur :root en tête de
+     fichier). Les navigateurs/WebViews qui assombrissent automatiquement une
+     page sans règle prefers-color-scheme n'appliquent plus ce comportement
+     ici puisqu'un vrai thème sombre est désormais déclaré et stylé. */
+
+  /* Export PDF : window.print() + feuille de style dédiée.
+     On masque tout ce qui n'est pas le résultat de la simulation et on
+     affiche un en-tête imprimable avec les paramètres choisis. Les couleurs
+     sont volontairement figées en clair ici : une simulation imprimée doit
+     rester lisible sur papier même si l'écran est en mode sombre. */
+  @media print {
+    header.site, .hero, #form-card, .action-row, .fiscal-card, .faq, footer.site, .results-tabs, [data-tab-panel="comparator"], .embed-section { display:none !important; }
+    html, body { background:#fff !important; color:var(--slate-900) !important; }
+    #print-header { display:block !important; margin:0 0 1.25rem; padding-bottom:1rem; border-bottom:2px solid var(--slate-900); }
+    #print-header .print-brand { margin:0 0 .625rem; font-family:var(--font-mono); font-weight:700; font-size:.875rem; color:var(--slate-500); }
+    #print-header .print-brand span { color:var(--emerald-600); }
+    #print-header h2 { margin:0; font-size:1.25rem; color:var(--slate-900); }
+    #print-header p { margin:.25rem 0 0; font-size:.8125rem; color:var(--slate-600); }
+    #print-header #print-date { color:var(--slate-400); font-size:.75rem; }
+    body, .container { max-width:none; margin:0; padding:0; }
+    .sim-grid { display:block !important; padding:0; }
+    #results-card { border:none; box-shadow:none; padding:0; background:#fff !important; color:var(--slate-900) !important; }
+    .alert-plafond { border:1px solid var(--amber-600); background:#fff; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sprite d'icônes (aucune dépendance externe) -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+</svg>
+
+<!-- En-tête imprimable uniquement (voir @media print) -->
+<div id="print-header">
+  <p class="print-brand">TJM<span>Calc</span> — tjmcalc.fr</p>
+  <h2>Simulation de revenu freelance</h2>
+  <p id="print-params"></p>
+  <p id="print-date"></p>
+</div>
+
+<header class="site">
+  <div class="container">
+    <span class="brand">TJM<em>Calc</em></span>
+    <span class="header-tag">Simulateur gratuit pour indépendants</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <p class="eyebrow">Simulateur gratuit</p>
+    <h1>Simulateur de revenu freelance &amp; indépendant</h1>
+    <p class="subtitle">Convertissez votre TJM en revenu net en 10 secondes, quel que soit votre activité et votre statut juridique : micro-entreprise, société ou portage salarial.</p>
+  </section>
+
+  <section class="container">
+    <div class="sim-grid">
+      <!-- Formulaire -->
+      <div class="card" id="form-card">
+        <h2>Vos paramètres</h2>
+
+        <div class="mode-tabs" role="tablist" aria-label="Sens du calcul">
+          <button type="button" class="mode-tab-btn is-active" id="mode-tab-tjm" role="tab" aria-selected="true">Je pars de mon TJM</button>
+          <button type="button" class="mode-tab-btn" id="mode-tab-net" role="tab" aria-selected="false">Je vise un revenu net</button>
+        </div>
+
+        <div class="field" id="tjm-field">
+          <div class="tjm-row">
+            <label for="tjm-number">TJM (taux journalier moyen)</label>
+            <div class="tjm-stepper">
+              <button type="button" class="tjm-step-btn" id="tjm-step-down" aria-label="Diminuer le TJM de 10 €">
+                <svg class="icon"><use href="#i-minus"></use></svg>
+              </button>
+              <div class="tjm-box">
+                <input type="number" id="tjm-number" min="0" value="500" inputmode="numeric">
+                <span>€</span>
+              </div>
+              <button type="button" class="tjm-step-btn" id="tjm-step-up" aria-label="Augmenter le TJM de 10 €">
+                <svg class="icon"><use href="#i-plus"></use></svg>
+              </button>
+            </div>
+          </div>
+          <input type="range" id="tjm-range" min="20" max="5000" step="10" value="500" aria-label="TJM en euros">
+        </div>
+
+        <div class="field" id="revenu-cible-field" style="display:none">
+          <label for="revenu-cible-input">Revenu net mensuel visé</label>
+          <div class="tjm-box" style="max-width:11rem">
+            <input type="number" id="revenu-cible-input" min="0" value="3500" inputmode="numeric">
+            <span>€</span>
+          </div>
+          <div class="cible-basis-row" role="radiogroup" aria-label="Base du revenu visé">
+            <label class="radio-pill is-checked">
+              <input type="radio" name="cible-basis" value="avant" checked>
+              <span>Net avant impôt</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="cible-basis" value="apres">
+              <span>Net après impôt</span>
+            </label>
+          </div>
+          <div class="tjm-requis-callout">
+            <p class="lbl">TJM nécessaire</p>
+            <p class="val" id="tjm-requis-value">—</p>
+          </div>
+          <p class="field-hint">TJM arrondi au centime supérieur pour garantir l'atteinte de votre objectif (les montants ci-dessous restent affichés à l'euro près).</p>
+        </div>
+
+        <div class="field">
+          <label for="jours-input">Jours travaillés / mois</label>
+          <input type="number" class="field-input" id="jours-input" min="1" max="25" value="18" inputmode="numeric">
+          <p class="field-hint">En moyenne 15 à 19 jours facturés par mois pour un indépendant (hors prospection, admin, congés).</p>
+        </div>
+
+        <div class="field">
+          <label for="activite-select">Activité exercée</label>
+          <div class="select-wrap">
+            <select id="activite-select"></select>
+            <svg class="icon"><use href="#i-chevron"></use></svg>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="statut-select">Statut</label>
+          <div class="select-wrap">
+            <select id="statut-select"></select>
+            <svg class="icon"><use href="#i-chevron"></use></svg>
+          </div>
+          <p class="field-hint" id="statut-hint"></p>
+        </div>
+
+        <div class="field">
+          <label class="checkbox-row" for="acre-check">
+            <input type="checkbox" id="acre-check">
+            <span>Je bénéficie de l'ACRE (1ʳᵉ année d'activité)</span>
+            <details class="tooltip">
+              <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+              <div class="tooltip-content">Depuis le 1ᵉʳ juillet 2026, l'ACRE réduit les cotisations de 25% la 1ʳᵉ année (au lieu de 50% auparavant) et n'est plus ouverte à tous les créateurs : elle est réservée à certains profils (demandeurs d'emploi, 18-25 ans, bénéficiaires du RSA, quartiers prioritaires...). Vérifiez votre éligibilité avant de cocher.</div>
+            </details>
+          </label>
+        </div>
+
+        <div class="field" id="frais-field" style="display:none">
+          <label for="frais-input" class="label-with-tooltip">
+            Frais professionnels mensuels estimés
+            <details class="tooltip">
+              <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+              <div class="tooltip-content">En EI/EURL/SARL (gérance TNS), ces frais réduisent directement votre bénéfice imposable, donc votre net. En SASU/SAS/SA, ils réduisent le résultat de la société (avant IS et arbitrage salaire/dividendes) : l'effet sur votre net personnel n'est donc pas parfaitement linéaire. Ce simulateur applique une approximation simplifiée ; un expert-comptable peut affiner selon votre montage réel.</div>
+            </details>
+          </label>
+          <input type="number" class="field-input" id="frais-input" min="0" max="50000" value="0" inputmode="numeric">
+          <p class="field-hint">Matériel, mutuelle, comptable, loyer... Ces frais réels sont déduits du chiffre d'affaires avant application des charges (non disponible en micro-entreprise, où l'abattement forfaitaire les remplace déjà).</p>
+        </div>
+
+        <details class="field-accordion" id="fiscal-options-accordion">
+          <summary class="field-accordion-summary">
+            <span>Options fiscales (optionnel)</span>
+            <svg class="icon"><use href="#i-chevron"></use></svg>
+          </summary>
+          <div class="field-accordion-body">
+            <p class="field-hint" style="margin:0 0 1rem">Ces paramètres affinent le calcul de votre impôt sur le revenu, affiché juste à côté dans « Net après impôt » et en détail dans le bloc « Impôt, TVA et charges » plus bas.</p>
+            <div class="fiscal-inline-group">
+              <div class="field">
+                <label for="fiscal-parts-input">Parts fiscales du foyer</label>
+                <input type="number" class="field-input" id="fiscal-parts-input" min="1" max="10" step="0.5" value="1" inputmode="decimal">
+              </div>
+              <div class="field">
+                <label for="fiscal-situation-select">Situation déclarative</label>
+                <div class="select-wrap">
+                  <select id="fiscal-situation-select">
+                    <option value="single">Célibataire / divorcé(e) / veuf(ve)</option>
+                    <option value="couple">Marié(e) ou pacsé(e) (imposition commune)</option>
+                  </select>
+                  <svg class="icon"><use href="#i-chevron"></use></svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="fiscal-autres-input">Autres revenus imposables du foyer (€ / an)</label>
+              <input type="number" class="field-input" id="fiscal-autres-input" min="0" max="1000000" value="0" inputmode="numeric">
+              <p class="field-hint">Salaire d'un·e conjoint·e, autre activité... Ce montant sert à situer votre foyer dans le bon quotient familial ; seul l'impôt réellement attribuable à votre activité freelance est déduit de votre net.</p>
+            </div>
+
+            <div class="field" id="fiscal-vfl-field" style="display:none">
+              <label class="checkbox-row" for="fiscal-vfl-check">
+                <input type="checkbox" id="fiscal-vfl-check">
+                <span>J'ai opté pour le versement libératoire de l'impôt sur le revenu</span>
+                <details class="tooltip">
+                  <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+                  <div class="tooltip-content">Option réservée aux micro-entrepreneurs dont le revenu fiscal de référence du foyer (année N-2) ne dépasse pas environ 27 478 € par part. Elle remplace l'abattement forfaitaire et le barème progressif par un taux fixe payé chaque mois à l'Urssaf, en même temps que vos cotisations.</div>
+                </details>
+              </label>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- Résultats -->
+      <div class="card" id="results-card">
+        <div class="results-tabs" role="tablist" aria-label="Affichage des résultats">
+          <button type="button" class="results-tab-btn is-active" id="results-tab-mystat" role="tab" aria-selected="true" aria-controls="tab-panel-mystat">Mon statut</button>
+          <button type="button" class="results-tab-btn" id="results-tab-comparator" role="tab" aria-selected="false" aria-controls="tab-panel-comparator">Comparatif global</button>
+        </div>
+
+        <div class="results-tab-panel" id="tab-panel-mystat" data-tab-panel="mystat" role="tabpanel">
+          <div class="alert-goal" id="goal-banner">
+            <svg class="icon"><use href="#i-info"></use></svg>
+            <p id="goal-banner-text"></p>
+          </div>
+          <p class="waterfall-label">Votre calcul</p>
+
+          <div>
+            <div class="wf-line tone-muted">
+              <span class="lbl" id="line-tjm-label">TJM × 18 jours</span>
+              <span class="val" id="line-tjm-value">500 €</span>
+            </div>
+            <div class="wf-line tone-strong">
+              <span class="lbl">Revenu brut mensuel</span>
+              <span class="val" id="line-brut-value">0 €</span>
+            </div>
+            <div class="wf-line tone-muted" id="line-frais-row" style="display:none">
+              <span class="lbl">− Frais professionnels</span>
+              <span class="val" id="line-frais-value">0 €</span>
+            </div>
+            <div class="wf-line tone-amber">
+              <span class="lbl">
+                <span id="line-charges-label">− Charges</span>
+                <details class="tooltip">
+                  <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+                  <div class="tooltip-content" id="charges-tooltip-text"></div>
+                </details>
+              </span>
+              <span class="val" id="line-charges-value">0 €</span>
+            </div>
+            <div class="wf-line tone-rose">
+              <span class="lbl">
+                − Impôt sur le revenu (estimé)
+                <details class="tooltip">
+                  <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+                  <div class="tooltip-content" id="impot-tooltip-text"></div>
+                </details>
+              </span>
+              <span class="val" id="line-impot-value">0 €</span>
+            </div>
+
+            <div class="bar"><span class="b-net" id="bar-net"></span><span class="b-charges" id="bar-charges"></span><span class="b-impot" id="bar-impot"></span><span class="b-frais" id="bar-frais"></span></div>
+            <div class="wf-divider"></div>
+          </div>
+
+          <div class="hero-result">
+            <p class="lbl">Net<span class="hero-result-badge">estimé</span></p>
+            <p class="val" id="hero-net-fiscal">0 €</p>
+          </div>
+          <p class="hero-result-note">Net = TJM × jours − frais − charges sociales − impôt sur le revenu (détail juste au-dessus). Basé sur vos <a href="#fiscal-options-accordion">options fiscales</a> (parts, situation, autres revenus) et le barème 2026. Détail complet dans <a href="#fiscal-card">Impôt, TVA et charges</a> ci-dessous.</p>
+
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <div class="lbl">Net annuel</div>
+              <p class="val" id="stat-annuel">0 €</p>
+            </div>
+            <div class="mini-stat">
+              <div class="lbl">
+                Brut annuel
+                <details class="tooltip">
+                  <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+                  <div class="tooltip-content">Le brut, c'est le chiffre d'affaires avant charges ni impôt : vous ne le touchez pas directement. C'est le Net annuel, une fois les charges sociales et l'impôt sur le revenu retirés, qui atterrit réellement dans votre poche.</div>
+                </details>
+              </div>
+              <p class="val" id="stat-brut-annuel">0 €</p>
+            </div>
+          </div>
+
+          <div class="alert-plafond" id="plafond-alert">
+            <svg class="icon"><use href="#i-alert"></use></svg>
+            <p id="plafond-alert-text"></p>
+          </div>
+
+          <div class="alert-info" id="tva-alert">
+            <svg class="icon"><use href="#i-info"></use></svg>
+            <p id="tva-alert-text"></p>
+          </div>
+
+          <div class="action-row">
+            <button type="button" class="btn-outline" id="btn-share">
+              <svg class="icon"><use href="#i-link"></use></svg>
+              <span id="btn-share-label">Copier le lien de cette simulation</span>
+            </button>
+            <button type="button" class="btn-outline" id="btn-print">
+              <svg class="icon"><use href="#i-printer"></use></svg>
+              <span>Exporter en PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="results-tab-panel" id="tab-panel-comparator" data-tab-panel="comparator" role="tabpanel" hidden>
+          <p class="waterfall-label">Comparateur de statuts</p>
+          <p class="field-hint">Net mensuel estimé pour chaque statut, à TJM, jours et activité identiques. Cliquez sur un statut pour basculer votre simulation dessus.</p>
+          <div class="comparator-list" id="comparator-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card fiscal-card" id="fiscal-card">
+      <h2>Impôt, TVA et charges : votre net fiscal réel</h2>
+      <p class="field-hint">Calcul gratuit et détaillé : abattement micro-entreprise ou versement libératoire, barème progressif de l'impôt sur le revenu 2026, TVA et répartition de vos cotisations sociales. Réglez vos parts fiscales, situation et autres revenus dans <a href="#fiscal-options-accordion">Options fiscales</a>, en haut de la page.</p>
+
+      <p class="fiscal-section-title">Détail de vos charges sociales</p>
+      <div class="fiscal-breakdown-list" id="fiscal-charges-list"></div>
+
+      <p class="fiscal-section-title">Impôt sur le revenu (barème 2026)</p>
+      <div>
+        <div class="fiscal-line">
+          <span class="lbl" id="fiscal-imposable-label">Revenu imposable retenu (annuel)</span>
+          <span class="val" id="fiscal-imposable-value">0 €</span>
+        </div>
+        <div class="fiscal-line tone-amber">
+          <span class="lbl">
+            <span id="fiscal-ir-label">− Impôt sur le revenu attribuable</span>
+            <details class="tooltip">
+              <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
+              <div class="tooltip-content" id="fiscal-ir-tooltip"></div>
+            </details>
+          </span>
+          <span class="val" id="fiscal-ir-value">0 €</span>
+        </div>
+      </div>
+
+      <div class="alert-info" id="fiscal-tva-alert">
+        <svg class="icon"><use href="#i-receipt"></use></svg>
+        <p id="fiscal-tva-text"></p>
+      </div>
+
+      <div class="fiscal-net-hero">
+        <p class="lbl">Net fiscal réel mensuel (après charges ET impôt sur le revenu)</p>
+        <p class="val" id="fiscal-net-monthly">0 €</p>
+        <p class="fiscal-note" id="fiscal-net-annual-note" style="margin-top:.5rem">0 € / an</p>
+      </div>
+
+      <p class="fiscal-note">⚠️ Estimation pédagogique fondée sur les barèmes 2026 (Urssaf, DGFiP), à affiner selon votre situation réelle (charges déductibles, crédits et réductions d'impôt...). Ne remplace pas les conseils d'un expert-comptable.</p>
+    </div>
+
+    <div class="card embed-section">
+      <h2>Intégrez ce simulateur sur votre site</h2>
+      <p class="field-hint">Copiez ce code sur votre blog ou votre plateforme freelance pour afficher gratuitement le simulateur, avec une mention « Propulsé par TJMCalc ».</p>
+      <div class="embed-code-box"><code id="embed-code-text"></code></div>
+      <button type="button" class="btn-outline" id="btn-copy-embed" style="margin-top:.75rem">
+        <svg class="icon"><use href="#i-link"></use></svg>
+        <span id="btn-copy-embed-label">Copier le code d'intégration</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2>Questions fréquentes</h2>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="container">
+      <p>⚠️ Ce simulateur fournit une estimation pédagogique pour freelances, indépendants, entrepreneurs et professions libérales, basée sur des taux de charges moyens par statut et par activité. Il ne remplace pas les conseils d'un expert-comptable ou d'un professionnel du droit. Les résultats peuvent varier selon votre situation réelle (chiffre d'affaires, régime fiscal, région, ancienneté...).</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Données ----------
+  var MICRO_RATES = { vente: 0.123, service: 0.212, liberale: 0.256, cipav: 0.232 };
+  // Plafonds de chiffre d'affaires du régime micro-entreprise (période 2026-2028).
+  // Un dépassement une seule année civile est toléré ; ce n'est qu'en cas de
+  // dépassement deux années de suite que la sortie du régime micro devient effective.
+  var PLAFOND_MICRO = { vente: 203100, service: 83600, liberale: 83600, cipav: 83600 };
+  // Seuils de franchise en base de TVA (inchangés en 2026) : seuil de base,
+  // et seuil majoré (tolérance un an) au-delà duquel la TVA s'applique immédiatement.
+  var TVA_FRANCHISE = { vente: { base: 85000, majore: 93500 }, service: { base: 37500, majore: 41250 } };
+  var MICRO_RATE_LABELS = {
+    vente: { short: 'vente', full: 'vente de marchandises' },
+    service: { short: 'service', full: 'prestations de services (BIC)' },
+    liberale: { short: 'libérale', full: 'profession libérale non réglementée (BNC)' },
+    cipav: { short: 'libérale réglementée', full: 'profession libérale réglementée (CIPAV)' }
+  };
+
+  var STATUTS = [
+    { id: 'micro', label: 'Micro-entreprise', shortLabel: 'Micro', taux: 0.212, isMicro: true, desc: "Cotisations en % du CA. Le taux exact dépend de votre activité — détecté automatiquement." },
+    { id: 'ei', label: 'Entreprise Individuelle (EI)', shortLabel: 'EI', taux: 0.42, allowsFraisPro: true, desc: "Nom propre, cotisations TNS sur le bénéfice réel. Taux moyen indicatif ~42%." },
+    { id: 'eurl', label: 'EURL', shortLabel: 'EURL', taux: 0.42, allowsFraisPro: true, desc: "Gérant associé unique, cotisations TNS. Taux moyen indicatif ~42%." },
+    { id: 'sarl', label: 'SARL', shortLabel: 'SARL', taux: 0.42, allowsFraisPro: true, desc: "Gérant majoritaire TNS, comme en EURL. Taux moyen indicatif ~42%." },
+    { id: 'sasu', label: 'SASU', shortLabel: 'SASU', taux: 0.55, allowsFraisPro: true, desc: "Président assimilé salarié : charges plus élevées, protection proche d'un CDI. Taux moyen indicatif ~55%." },
+    { id: 'sas', label: 'SAS', shortLabel: 'SAS', taux: 0.55, allowsFraisPro: true, desc: "Version pluripersonnelle de la SASU. Taux moyen indicatif ~55%." },
+    { id: 'sa', label: 'SA', shortLabel: 'SA', taux: 0.55, allowsFraisPro: true, desc: "Structures plus importantes, dirigeants assimilés salariés. Taux moyen indicatif ~55%." },
+    { id: 'snc', label: 'SNC', shortLabel: 'SNC', taux: 0.42, allowsFraisPro: true, desc: "Associés commerçants, TNS. Forme rare en solo. Taux moyen indicatif ~42%." },
+    { id: 'scs', label: 'SCS', shortLabel: 'SCS', taux: 0.44, allowsFraisPro: true, desc: "Commandités TNS + commanditaires investisseurs. Peu courant pour un freelance. Taux moyen indicatif ~44%." },
+    { id: 'sca', label: 'SCA', shortLabel: 'SCA', taux: 0.46, allowsFraisPro: true, desc: "Forme hybride rare, plutôt pour grandes structures familiales. Taux moyen indicatif ~46%." },
+    { id: 'portage', label: 'Portage salarial', shortLabel: 'Portage', taux: 0.52, desc: "Salarié d'une société de portage, couverture sociale complète. Taux moyen indicatif ~50-55%." }
+  ];
+
+  var ACTIVITE_CATEGORIES = [
+    { id: 'informatique', label: 'Informatique', activites: [
+      { id: 'dev-web', label: 'Développeur web', microType: 'liberale' },
+      { id: 'dev-mobile', label: 'Développeur mobile', microType: 'liberale' },
+      { id: 'dev-logiciel', label: 'Développeur logiciel', microType: 'liberale' },
+      { id: 'devops', label: 'DevOps', microType: 'liberale' },
+      { id: 'data-engineer', label: 'Data Engineer', microType: 'liberale' },
+      { id: 'data-scientist', label: 'Data Scientist', microType: 'liberale' },
+      { id: 'ia-ml', label: 'IA / Machine Learning', microType: 'liberale' },
+      { id: 'consultant-it', label: 'Consultant IT', microType: 'liberale' },
+      { id: 'admin-systeme', label: 'Administrateur système', microType: 'liberale' },
+      { id: 'cybersecurite', label: 'Cybersécurité', microType: 'liberale' },
+      { id: 'ux-designer', label: 'UX Designer', microType: 'liberale' },
+      { id: 'ui-designer', label: 'UI Designer', microType: 'liberale' },
+      { id: 'product-designer', label: 'Product Designer', microType: 'liberale' }
+    ]},
+    { id: 'marketing', label: 'Marketing / Communication', activites: [
+      { id: 'community-manager', label: 'Community Manager', microType: 'liberale' },
+      { id: 'seo', label: 'SEO', microType: 'liberale' },
+      { id: 'sea', label: 'SEA', microType: 'liberale' },
+      { id: 'growth', label: 'Growth', microType: 'liberale' },
+      { id: 'copywriter', label: 'Copywriter', microType: 'liberale' },
+      { id: 'redacteur', label: 'Rédacteur', microType: 'liberale' },
+      { id: 'graphiste', label: 'Graphiste', microType: 'liberale' },
+      { id: 'motion-designer', label: 'Motion Designer', microType: 'liberale' },
+      { id: 'monteur-video', label: 'Monteur vidéo', microType: 'service' },
+      { id: 'photographe', label: 'Photographe', microType: 'service' },
+      { id: 'videaste', label: 'Vidéaste', microType: 'service' }
+    ]},
+    { id: 'conseil', label: 'Conseil', activites: [
+      { id: 'consultant', label: 'Consultant', microType: 'liberale' },
+      { id: 'coach', label: 'Coach', microType: 'liberale' },
+      { id: 'formateur', label: 'Formateur', microType: 'liberale' },
+      { id: 'business-developer', label: 'Business Developer', microType: 'liberale' },
+      { id: 'rh', label: 'RH', microType: 'liberale' },
+      { id: 'finance', label: 'Finance', microType: 'liberale' },
+      { id: 'juridique', label: 'Juridique', microType: 'liberale' }
+    ]},
+    { id: 'btp', label: 'BTP', activites: [
+      { id: 'electricien', label: 'Électricien', microType: 'service' },
+      { id: 'plombier', label: 'Plombier', microType: 'service' },
+      { id: 'macon', label: 'Maçon', microType: 'service' },
+      { id: 'peintre', label: 'Peintre', microType: 'service' },
+      { id: 'menuisier', label: 'Menuisier', microType: 'service' },
+      { id: 'carreleur', label: 'Carreleur', microType: 'service' },
+      { id: 'chauffagiste', label: 'Chauffagiste', microType: 'service' },
+      { id: 'couvreur', label: 'Couvreur', microType: 'service' },
+      { id: 'paysagiste', label: 'Paysagiste', microType: 'service' }
+    ]},
+    { id: 'transport', label: 'Transport', activites: [
+      { id: 'chauffeur-vtc', label: 'Chauffeur VTC', microType: 'service' },
+      { id: 'taxi', label: 'Taxi', microType: 'service' },
+      { id: 'chauffeur-livreur', label: 'Chauffeur-livreur', microType: 'service' },
+      { id: 'coursier', label: 'Coursier', microType: 'service' }
+    ]},
+    { id: 'commerce', label: 'Commerce', activites: [
+      { id: 'ecommerce', label: 'E-commerce', microType: 'vente' },
+      { id: 'vente', label: 'Vente', microType: 'vente' },
+      { id: 'achat-revente', label: 'Achat / Revente', microType: 'vente' },
+      { id: 'dropshipping', label: 'Dropshipping', microType: 'vente' }
+    ]},
+    { id: 'sante', label: 'Santé', activites: [
+      { id: 'infirmier', label: 'Infirmier', microType: 'cipav' },
+      { id: 'kinesitherapeute', label: 'Kinésithérapeute', microType: 'cipav' },
+      { id: 'osteopathe', label: 'Ostéopathe', microType: 'cipav' },
+      { id: 'psychologue', label: 'Psychologue', microType: 'cipav' },
+      { id: 'dieteticien', label: 'Diététicien', microType: 'cipav' }
+    ]},
+    { id: 'creation', label: 'Création', activites: [
+      { id: 'illustrateur', label: 'Illustrateur', microType: 'liberale' },
+      { id: 'auteur', label: 'Auteur', microType: 'liberale' },
+      { id: 'musicien', label: 'Musicien', microType: 'liberale' },
+      { id: 'artiste', label: 'Artiste', microType: 'liberale' },
+      { id: 'traducteur', label: 'Traducteur', microType: 'liberale' }
+    ]},
+    { id: 'autres', label: 'Autres', activites: [
+      { id: 'profession-liberale', label: 'Profession libérale', microType: 'liberale' },
+      { id: 'artisan', label: 'Artisan', microType: 'service' },
+      { id: 'prestataire-services', label: 'Prestataire de services', microType: 'service' },
+      { id: 'commerce-general', label: 'Commerce', microType: 'vente' },
+      { id: 'autre', label: 'Autre', microType: 'service' }
+    ]}
+  ];
+
+  var FAQS = [
+    { q: 'Qu’est-ce que le TJM (Taux Journalier Moyen) ?', a: 'Le TJM est le montant facturé par un freelance ou un indépendant pour une journée de travail. Il doit couvrir non seulement le temps de travail effectif, mais aussi le temps non facturable : prospection, administratif, formation et congés, contrairement à un salaire journalier en CDI.' },
+    { q: 'Ce simulateur est-il fiable à 100% ?', a: "Ce simulateur donne une estimation pédagogique basée sur des taux de charges moyens par statut et par activité. Votre situation réelle (chiffre d'affaires, région, ancienneté, régime fiscal précis) peut faire varier le résultat. Pour un calcul exact, consultez un expert-comptable." },
+    { q: 'Comment calculer son salaire net en freelance ?', a: "Le calcul tient en trois étapes. D'abord, votre revenu brut mensuel : votre TJM multiplié par le nombre de jours facturés dans le mois. Ensuite, on retire les charges sociales et fiscales liées à votre statut et à votre activité, entre 12% et 55% selon les cas. Ce qui reste est votre revenu net, celui que vous touchez réellement. Le simulateur ci-dessus applique automatiquement cette logique pour les freelances, indépendants et professions libérales : modifiez votre TJM ou vos jours travaillés et le résultat se met à jour instantanément, sans bouton à cliquer." },
+    { q: 'TJM vs salaire net : convertir son taux journalier', a: "Une erreur fréquente consiste à multiplier son TJM par 20 jours et par 12 mois pour estimer son revenu annuel. En réalité, un indépendant facture rarement plus de 15 à 19 jours par mois : le reste du temps est consacré à la prospection, à l'administratif, à la formation et aux congés non rémunérés. C'est pourquoi le nombre de jours travaillés par mois est un paramètre clé du simulateur, à ajuster selon votre activité réelle plutôt que votre disponibilité théorique." },
+    { q: 'Micro-entreprise, société ou portage salarial : quel statut choisir ?', a: "La micro-entreprise offre une gestion simplifiée : le taux de charges (12,3% à 25,6%) dépend directement de votre activité — vente, prestation de service ou profession libérale — et le simulateur le détecte automatiquement. Les sociétés (EI, EURL, SARL, SASU, SAS, SA...) permettent davantage d'optimisation mais impliquent une comptabilité plus lourde : comptez environ 42% en gérance TNS (EURL, SARL, EI) contre environ 55% en présidence assimilée salarié (SASU, SAS, SA). Le portage salarial conserve le statut de salarié avec une couverture sociale complète, contre des frais de gestion plus élevés (50% à 55%). Chaque statut répond à une priorité différente : simplicité, optimisation fiscale ou sécurité sociale. Un expert-comptable peut vous aider à trancher selon votre situation précise et votre activité." },
+    { q: 'Faut-il payer la CFE (Cotisation Foncière des Entreprises) ?', a: "Oui, dans la quasi-totalité des cas : la CFE est due par tous les indépendants et sociétés dès la deuxième année d'activité (une exonération s'applique la 1ʳᵉ année civile), y compris en micro-entreprise. Son montant forfaitaire dépend de votre commune et de votre chiffre d'affaires, généralement entre 100 € et 800 € par an ; une exonération existe pour les tout petits chiffres d'affaires selon la commune. Ce montant annuel n'est pas inclus dans le calcul mensuel ci-dessus : pensez à le provisionner à part, en général autour de 25 à 65 €/mois lissés sur l'année." }
+  ];
+
+  var ACTIVITES_BY_ID = {};
+  ACTIVITE_CATEGORIES.forEach(function (cat) {
+    cat.activites.forEach(function (a) { ACTIVITES_BY_ID[a.id] = a; });
+  });
+  var STATUTS_BY_ID = {};
+  STATUTS.forEach(function (s) { STATUTS_BY_ID[s.id] = s; });
+
+  // ---------- Logique ----------
+  function formatEuros(v) {
+    return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(v || 0);
+  }
+
+  function resolveStatut(statutId, activiteId, acre) {
+    var base = STATUTS_BY_ID[statutId] || STATUTS[0];
+    // ACRE (depuis le 1er juillet 2026) : réduction de 25% des cotisations la 1ʳᵉ année,
+    // réservée à certains profils éligibles. Ne s'applique pas au portage salarial (statut salarié).
+    var acreOn = !!acre && statutId !== 'portage';
+    if (!base.isMicro) {
+      var tauxNS = acreOn ? base.taux * 0.75 : base.taux;
+      var descNS = base.desc + (acreOn ? ' Taux réduit avec l\u2019ACRE (\u201325% la 1ʳᵉ année).' : '');
+      return { taux: tauxNS, resolvedShort: base.shortLabel, desc: descNS };
+    }
+    var activite = ACTIVITES_BY_ID[activiteId];
+    var microType = activite ? activite.microType : 'service';
+    var tauxBase = MICRO_RATES[microType];
+    var taux = acreOn ? tauxBase * 0.75 : tauxBase;
+    var rateLabel = MICRO_RATE_LABELS[microType];
+    return {
+      taux: taux,
+      microType: microType,
+      resolvedShort: base.shortLabel + ' · ' + rateLabel.short,
+      desc: base.desc + ' Activité détectée : ' + rateLabel.full + ' (' + Math.round(tauxBase * 100) + '%' + (acreOn ? ', réduit à ' + Math.round(taux * 100) + '% avec l\u2019ACRE' : '') + ').'
+    };
+  }
+
+  function calculate(tjm, jours, statutId, activiteId, fraisPro, acre) {
+    var base = STATUTS_BY_ID[statutId] || STATUTS[0];
+    var statut = resolveStatut(statutId, activiteId, acre);
+    var safeTjm = Math.max(0, Number(tjm) || 0);
+    var safeJours = Math.max(0, Number(jours) || 0);
+    var brut = safeTjm * safeJours;
+    // Frais professionnels réels : déductibles en société, pas en micro (déjà couvert par
+    // l'abattement forfaitaire) ni en portage (frais de gestion déjà intégrés au taux).
+    var safeFrais = base.allowsFraisPro ? Math.max(0, Math.min(Number(fraisPro) || 0, brut)) : 0;
+    var assiette = Math.max(0, brut - safeFrais);
+    var charges = assiette * statut.taux;
+    var net = assiette - charges;
+    var fraisPct = brut > 0 ? Math.round((safeFrais / brut) * 100) : 0;
+    var chargesPct = brut > 0 ? Math.round((charges / brut) * 100) : 0;
+    var netPct = Math.max(0, 100 - chargesPct - fraisPct);
+    return {
+      statut: statut, brut: brut, frais: safeFrais, fraisPct: fraisPct,
+      charges: charges, chargesPct: chargesPct,
+      netPct: netPct, net: net, netAnnuel: net * 12, brutAnnuel: brut * 12
+    };
+  }
+
+  // ---------- Fiscalité avancée (gratuite, sans limitation) : impôt sur le revenu,
+  // détail des cotisations sociales, TVA précise et optimiseur de TJM cible. ----------
+
+  // Barème progressif de l'impôt sur le revenu 2026 (revenus 2025), loi de finances
+  // pour 2026 promulguée le 19 février 2026 (revalorisation des tranches de +0,9%).
+  var IR_TRANCHES_2026 = [
+    { min: 0, max: 11600, taux: 0 },
+    { min: 11600, max: 29579, taux: 0.11 },
+    { min: 29579, max: 84577, taux: 0.30 },
+    { min: 84577, max: 181917, taux: 0.41 },
+    { min: 181917, max: Infinity, taux: 0.45 }
+  ];
+  // Décote 2026 : annule ou réduit l'impôt des foyers situés juste au-dessus du seuil
+  // d'imposition. decote = base − 45,25% × impôt brut (si positif et sous le seuil).
+  var DECOTE_2026 = {
+    single: { seuil: 1982, base: 897 },
+    couple: { seuil: 3277, base: 1483 }
+  };
+  var DECOTE_TAUX = 0.4525;
+  var SEUIL_NON_RECOUVREMENT = 61; // en-deçà de ce montant, l'impôt n'est pas recouvré
+
+  // Abattement forfaitaire micro-entreprise (remplace la déduction des charges réelles),
+  // applicable sauf option pour le versement libératoire. Minimum légal : 305€/an.
+  var MICRO_ABATTEMENT_RATE = { vente: 0.71, service: 0.50, liberale: 0.34, cipav: 0.34 };
+  var MICRO_ABATTEMENT_MIN_ANNUEL = 305;
+  // Versement libératoire de l'impôt sur le revenu : taux fixe sur le CA, réservé aux
+  // foyers dont le revenu fiscal de référence (N-2) ne dépasse pas ~27 478€ par part.
+  var VFL_RATE = { vente: 0.01, service: 0.017, liberale: 0.022, cipav: 0.022 };
+  var VFL_SEUIL_RFR_PAR_PART_INDICATIF = 27478;
+  // Abattement forfaitaire pour frais professionnels des revenus imposés selon les
+  // règles applicables aux salariés (dirigeant assimilé salarié, porté salarial).
+  var SALARIE_ABATTEMENT_FRAIS = 0.10;
+  // Taux de TVA standard retenu à titre indicatif (des taux réduits de 5,5% à 10%
+  // existent pour certaines activités).
+  var TVA_TAUX_STANDARD = 0.20;
+
+  // Répartition indicative des cotisations sociales par grande famille de statut.
+  // Micro-entreprise : structure officielle publiée par l'Urssaf (réforme du 1er
+  // janvier 2026) pour 100€ de cotisation, appliquée proportionnellement à votre
+  // taux réel. Les autres statuts reposent sur des cotisations à taux progressifs
+  // (PASS, tranches de revenu) : la ventilation indiquée est une moyenne pédagogique
+  // cohérente avec les taux publiés par l'Urssaf et les caisses de retraite 2026.
+  var CHARGES_BREAKDOWN = {
+    micro: [
+      { label: 'Retraite de base', frac: 0.4345 },
+      { label: 'Retraite complémentaire', frac: 0.1975 },
+      { label: 'CSG-CRDS', frac: 0.2360 },
+      { label: 'Assurance maladie-maternité', frac: 0.1005 },
+      { label: 'Invalidité-décès', frac: 0.0315 }
+    ],
+    tns: [
+      { label: 'Retraite de base', frac: 0.40 },
+      { label: 'Retraite complémentaire', frac: 0.16 },
+      { label: 'CSG-CRDS', frac: 0.22 },
+      { label: 'Assurance maladie-maternité', frac: 0.16 },
+      { label: 'Allocations familiales', frac: 0.03 },
+      { label: 'Invalidité-décès', frac: 0.03 }
+    ],
+    assimile: [
+      { label: 'Retraite (base + complémentaire Agirc-Arrco)', frac: 0.45 },
+      { label: 'Assurance maladie', frac: 0.12 },
+      { label: 'CSG-CRDS', frac: 0.20 },
+      { label: 'Allocations familiales', frac: 0.05 },
+      { label: 'Autres (formation, AT/MP, contributions diverses)', frac: 0.18 }
+    ],
+    portage: [
+      { label: 'Frais de gestion (société de portage)', frac: 0.15 },
+      { label: 'Retraite (base + complémentaire)', frac: 0.3825 },
+      { label: 'CSG-CRDS', frac: 0.17 },
+      { label: 'Assurance maladie', frac: 0.102 },
+      { label: 'Autres cotisations salariales', frac: 0.153 },
+      { label: 'Allocations familiales', frac: 0.0425 }
+    ]
+  };
+
+  function getChargesFamily(statutId) {
+    if (statutId === 'micro') return 'micro';
+    if (statutId === 'portage') return 'portage';
+    if (statutId === 'sasu' || statutId === 'sas' || statutId === 'sa') return 'assimile';
+    return 'tns'; // ei, eurl, sarl, snc, scs, sca
+  }
+
+  function computeIRBrutParPart(revenuParPart) {
+    var rev = Math.max(0, revenuParPart || 0);
+    var impot = 0;
+    for (var i = 0; i < IR_TRANCHES_2026.length; i++) {
+      var t = IR_TRANCHES_2026[i];
+      if (rev > t.min) impot += (Math.min(rev, t.max) - t.min) * t.taux;
+    }
+    return impot;
+  }
+
+  // Impôt net (après décote) dû par un foyer sur un revenu imposable annuel donné,
+  // selon la méthode officielle du quotient familial.
+  function computeIRforFoyer(revenuImposableAnnuel, parts, isCouple) {
+    var safeParts = Math.max(1, Number(parts) || 1);
+    var revenuParPart = Math.max(0, revenuImposableAnnuel || 0) / safeParts;
+    var impotBrut = computeIRBrutParPart(revenuParPart) * safeParts;
+    var conf = isCouple ? DECOTE_2026.couple : DECOTE_2026.single;
+    var decote = 0;
+    if (impotBrut > 0 && impotBrut < conf.seuil) {
+      decote = Math.max(0, conf.base - impotBrut * DECOTE_TAUX);
+    }
+    var impotNet = Math.max(0, impotBrut - decote);
+    if (impotNet < SEUIL_NON_RECOUVREMENT) impotNet = 0;
+    return impotNet;
+  }
+
+  function getTMI(revenuParPart) {
+    var rev = Math.max(0, revenuParPart || 0);
+    var tmi = 0;
+    for (var i = 0; i < IR_TRANCHES_2026.length; i++) {
+      if (rev > IR_TRANCHES_2026[i].min) tmi = IR_TRANCHES_2026[i].taux;
+    }
+    return tmi;
+  }
+
+  // Revenu imposable annuel retenu pour l'activité freelance (hors versement libératoire).
+  function getRevenuImposableActiviteAnnuel(base, r, activiteId) {
+    if (base.isMicro) {
+      var activite = ACTIVITES_BY_ID[activiteId];
+      var microType = activite ? activite.microType : 'service';
+      var tauxAbat = MICRO_ABATTEMENT_RATE[microType] || 0.34;
+      var caAnnuel = r.brutAnnuel;
+      if (caAnnuel <= 0) return 0;
+      var abattement = Math.min(caAnnuel, Math.max(caAnnuel * tauxAbat, MICRO_ABATTEMENT_MIN_ANNUEL));
+      return Math.max(0, caAnnuel - abattement);
+    }
+    if (base.id === 'sasu' || base.id === 'sas' || base.id === 'sa' || base.id === 'portage') {
+      // « Net avant impôt » de type salarial, diminué de l'abattement forfaitaire de 10%.
+      return Math.max(0, r.netAnnuel * (1 - SALARIE_ABATTEMENT_FRAIS));
+    }
+    // TNS au réel (EI, EURL, SARL, SNC, SCS, SCA) : le bénéfice net (CA − frais −
+    // cotisations sociales, déjà déductibles) constitue, en simplifié, le revenu
+    // professionnel imposable.
+    return Math.max(0, r.netAnnuel);
+  }
+
+  // Calcule l'ensemble des éléments fiscaux (impôt, TVA, net réel) pour un résultat
+  // de calculate() et des paramètres de foyer donnés.
+  function computeFiscalDetails(base, r, activiteId, fiscalParams) {
+    var parts = fiscalParams.parts;
+    var isCouple = fiscalParams.isCouple;
+    var autresRevenus = Math.max(0, fiscalParams.autresRevenus || 0);
+    var vflOn = !!fiscalParams.vfl && !!base.isMicro;
+    var out = { vflOn: vflOn };
+
+    if (vflOn) {
+      var activite = ACTIVITES_BY_ID[activiteId];
+      var microType = activite ? activite.microType : 'service';
+      out.vflRate = VFL_RATE[microType] || 0.022;
+      out.revenuImposableAnnuel = null;
+      out.impotAnnuel = r.brutAnnuel * out.vflRate;
+    } else {
+      out.revenuImposableAnnuel = getRevenuImposableActiviteAnnuel(base, r, activiteId);
+      var impotAvec = computeIRforFoyer(out.revenuImposableAnnuel + autresRevenus, parts, isCouple);
+      var impotSans = computeIRforFoyer(autresRevenus, parts, isCouple);
+      out.impotAnnuel = Math.max(0, impotAvec - impotSans);
+      out.tmi = getTMI((out.revenuImposableAnnuel + autresRevenus) / Math.max(1, Number(parts) || 1));
+    }
+
+    out.netReelAnnuel = r.netAnnuel - out.impotAnnuel;
+    out.netReelMensuel = out.netReelAnnuel / 12;
+    out.impotMensuel = out.impotAnnuel / 12;
+
+    // TVA précise : au-delà du seuil de franchise en base, la TVA doit être facturée
+    // en plus (elle n'est pas un revenu pour vous, sauf régularisation).
+    var activiteObj = ACTIVITES_BY_ID[activiteId];
+    var catTva = (activiteObj && activiteObj.microType === 'vente') ? 'vente' : 'service';
+    var seuils = TVA_FRANCHISE[catTva];
+    if (base.id !== 'portage' && r.brutAnnuel > seuils.base) {
+      out.tva = {
+        annuelHT: r.brutAnnuel,
+        tvaAnnuelle: r.brutAnnuel * TVA_TAUX_STANDARD,
+        tvaMensuelle: r.brut * TVA_TAUX_STANDARD
+      };
+    } else {
+      out.tva = null;
+    }
+    return out;
+  }
+
+  // ---------- Calcul inversé : revenu net visé -> TJM nécessaire ----------
+  // On réutilise calculate() / computeFiscalDetails() telles quelles plutôt que
+  // de dupliquer la logique fiscale : le calcul inversé reste ainsi toujours
+  // cohérent avec le calcul direct, même si les taux ou barèmes évoluent.
+  // net(tjm) est croissante (au sens large) avec le TJM, ce qui permet une
+  // recherche par bisection simple et robuste, y compris avec l'impôt progressif.
+  function netForTjm(tjm, jours, statutId, activiteId, fraisPro, acre, basis, fiscalParams) {
+    var r = calculate(tjm, jours, statutId, activiteId, fraisPro, acre);
+    if (basis === 'apres') {
+      var base = STATUTS_BY_ID[statutId] || STATUTS[0];
+      return computeFiscalDetails(base, r, activiteId, fiscalParams).netReelMensuel;
+    }
+    return r.net;
+  }
+
+  function solveTjmForTargetNet(targetNet, jours, statutId, activiteId, fraisPro, acre, basis, fiscalParams) {
+    var target = Math.max(0, Number(targetNet) || 0);
+    if (target <= 0 || jours <= 0) return 0;
+
+    // On élargit la borne haute jusqu'à dépasser la cible, avec un plafond de
+    // sécurité qui ne sera jamais atteint pour un revenu réaliste.
+    var hi = 1000;
+    var HARD_CAP = 100000000;
+    var guard = 0;
+    while (netForTjm(hi, jours, statutId, activiteId, fraisPro, acre, basis, fiscalParams) < target && hi < HARD_CAP && guard < 40) {
+      hi *= 2;
+      guard++;
+    }
+    hi = Math.min(hi, HARD_CAP);
+
+    var lo = 0;
+    for (var i = 0; i < 60; i++) {
+      var mid = (lo + hi) / 2;
+      if (netForTjm(mid, jours, statutId, activiteId, fraisPro, acre, basis, fiscalParams) < target) { lo = mid; } else { hi = mid; }
+    }
+    return hi;
+  }
+
+  // ---------- DOM ----------
+  var tjmNumber = document.getElementById('tjm-number');
+  var tjmRange = document.getElementById('tjm-range');
+  var tjmStepUp = document.getElementById('tjm-step-up');
+  var tjmStepDown = document.getElementById('tjm-step-down');
+  var joursInput = document.getElementById('jours-input');
+  var activiteSelect = document.getElementById('activite-select');
+  var statutSelect = document.getElementById('statut-select');
+  var statutHint = document.getElementById('statut-hint');
+  var acreCheck = document.getElementById('acre-check');
+  var fraisField = document.getElementById('frais-field');
+  var fraisInput = document.getElementById('frais-input');
+
+  var modeTabTjm = document.getElementById('mode-tab-tjm');
+  var modeTabNet = document.getElementById('mode-tab-net');
+  var tjmField = document.getElementById('tjm-field');
+  var revenuCibleField = document.getElementById('revenu-cible-field');
+  var revenuCibleInput = document.getElementById('revenu-cible-input');
+  var cibleBasisRadios = document.querySelectorAll('input[name="cible-basis"]');
+  var tjmRequisValue = document.getElementById('tjm-requis-value');
+  var goalBanner = document.getElementById('goal-banner');
+  var goalBannerText = document.getElementById('goal-banner-text');
+
+  var lineTjmLabel = document.getElementById('line-tjm-label');
+  var lineTjmValue = document.getElementById('line-tjm-value');
+  var lineBrutValue = document.getElementById('line-brut-value');
+  var lineFraisRow = document.getElementById('line-frais-row');
+  var lineFraisValue = document.getElementById('line-frais-value');
+  var lineChargesLabel = document.getElementById('line-charges-label');
+  var lineChargesValue = document.getElementById('line-charges-value');
+  var chargesTooltipText = document.getElementById('charges-tooltip-text');
+  var lineImpotValue = document.getElementById('line-impot-value');
+  var impotTooltipText = document.getElementById('impot-tooltip-text');
+  var barNet = document.getElementById('bar-net');
+  var barCharges = document.getElementById('bar-charges');
+  var barImpot = document.getElementById('bar-impot');
+  var barFrais = document.getElementById('bar-frais');
+  var heroNetFiscal = document.getElementById('hero-net-fiscal');
+  var statAnnuel = document.getElementById('stat-annuel');
+  var statBrutAnnuel = document.getElementById('stat-brut-annuel');
+  var faqList = document.getElementById('faq-list');
+  var plafondAlert = document.getElementById('plafond-alert');
+  var plafondAlertText = document.getElementById('plafond-alert-text');
+  var tvaAlert = document.getElementById('tva-alert');
+  var tvaAlertText = document.getElementById('tva-alert-text');
+  var comparatorList = document.getElementById('comparator-list');
+  var resultsTabMystat = document.getElementById('results-tab-mystat');
+  var resultsTabComparator = document.getElementById('results-tab-comparator');
+  var tabPanelMystat = document.getElementById('tab-panel-mystat');
+  var tabPanelComparator = document.getElementById('tab-panel-comparator');
+  var btnShare = document.getElementById('btn-share');
+  var btnShareLabel = document.getElementById('btn-share-label');
+  var btnPrint = document.getElementById('btn-print');
+  var printParams = document.getElementById('print-params');
+  var printDate = document.getElementById('print-date');
+  var embedCodeText = document.getElementById('embed-code-text');
+  var btnCopyEmbed = document.getElementById('btn-copy-embed');
+  var btnCopyEmbedLabel = document.getElementById('btn-copy-embed-label');
+
+  var fiscalPartsInput = document.getElementById('fiscal-parts-input');
+  var fiscalSituationSelect = document.getElementById('fiscal-situation-select');
+  var fiscalAutresInput = document.getElementById('fiscal-autres-input');
+  var fiscalVflField = document.getElementById('fiscal-vfl-field');
+  var fiscalVflCheck = document.getElementById('fiscal-vfl-check');
+  var fiscalChargesList = document.getElementById('fiscal-charges-list');
+  var fiscalImposableLabel = document.getElementById('fiscal-imposable-label');
+  var fiscalImposableValue = document.getElementById('fiscal-imposable-value');
+  var fiscalIrLabel = document.getElementById('fiscal-ir-label');
+  var fiscalIrValue = document.getElementById('fiscal-ir-value');
+  var fiscalIrTooltip = document.getElementById('fiscal-ir-tooltip');
+  var fiscalTvaAlert = document.getElementById('fiscal-tva-alert');
+  var fiscalTvaText = document.getElementById('fiscal-tva-text');
+  var fiscalNetMonthly = document.getElementById('fiscal-net-monthly');
+  var fiscalNetAnnualNote = document.getElementById('fiscal-net-annual-note');
+
+
+  function populateSelects() {
+    ACTIVITE_CATEGORIES.forEach(function (cat) {
+      var optgroup = document.createElement('optgroup');
+      optgroup.label = cat.label;
+      cat.activites.forEach(function (a) {
+        var opt = document.createElement('option');
+        opt.value = a.id;
+        opt.textContent = a.label;
+        optgroup.appendChild(opt);
+      });
+      activiteSelect.appendChild(optgroup);
+    });
+    activiteSelect.value = 'dev-web';
+
+    STATUTS.forEach(function (s) {
+      var opt = document.createElement('option');
+      opt.value = s.id;
+      opt.textContent = s.label;
+      statutSelect.appendChild(opt);
+    });
+    statutSelect.value = 'micro';
+  }
+
+  function populateFaq() {
+    FAQS.forEach(function (faq) {
+      var details = document.createElement('details');
+      details.className = 'faq-item';
+      var summary = document.createElement('summary');
+      var span = document.createElement('span');
+      span.textContent = faq.q;
+      var chevron = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      chevron.setAttribute('class', 'icon');
+      var use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#i-chevron');
+      use.setAttribute('href', '#i-chevron');
+      chevron.appendChild(use);
+      summary.appendChild(span);
+      summary.appendChild(chevron);
+      var p = document.createElement('p');
+      p.textContent = faq.a;
+      details.appendChild(summary);
+      details.appendChild(p);
+      faqList.appendChild(details);
+    });
+  }
+
+  function clamp(n, min, max) { return Math.min(Math.max(n, min), max); }
+
+  // ---------- Sens du calcul : "tjm" (TJM -> Net, par défaut) ou "net"
+  // (Revenu visé -> TJM, calcul inversé). ----------
+  var calcMode = 'tjm';
+
+  function getCibleBasis() {
+    var checked = document.querySelector('input[name="cible-basis"]:checked');
+    return checked ? checked.value : 'avant';
+  }
+
+  function setCalcMode(mode) {
+    calcMode = (mode === 'net') ? 'net' : 'tjm';
+    var isNet = calcMode === 'net';
+    modeTabTjm.classList.toggle('is-active', !isNet);
+    modeTabTjm.setAttribute('aria-selected', String(!isNet));
+    modeTabNet.classList.toggle('is-active', isNet);
+    modeTabNet.setAttribute('aria-selected', String(isNet));
+    tjmField.style.display = isNet ? 'none' : 'block';
+    revenuCibleField.style.display = isNet ? 'block' : 'none';
+    render();
+  }
+
+  function render() {
+    var jours = clamp(Number(joursInput.value) || 0, 0, 31);
+    var acre = acreCheck.checked;
+    var base = STATUTS_BY_ID[statutSelect.value];
+    fraisField.style.display = (base && base.allowsFraisPro) ? 'block' : 'none';
+    var frais = (base && base.allowsFraisPro) ? fraisInput.value : 0;
+    var fiscalParams = getFiscalParams();
+
+    // TJM sans aucune limite haute : un utilisateur qui vise un TJM très élevé
+    // (ou un revenu visé très élevé en mode inversé) doit voir le résultat exact,
+    // seul le curseur ci-dessous reste borné pour rester utilisable à la souris.
+    var tjm;
+    if (calcMode === 'net') {
+      var basis = getCibleBasis();
+      var solved = solveTjmForTargetNet(revenuCibleInput.value, jours, statutSelect.value, activiteSelect.value, frais, acre, basis, fiscalParams);
+      // Arrondi au centime supérieur : les montants affichés restent arrondis à
+      // l'euro (comme partout ailleurs dans l'outil), mais le calcul sous-jacent
+      // garde assez de précision pour que le net obtenu corresponde exactement
+      // à l'objectif visé, plutôt que d'accumuler quelques euros d'écart.
+      tjm = Math.ceil(solved * 100) / 100;
+      tjmNumber.value = tjm;
+      tjmRequisValue.textContent = tjm > 0 ? (formatEuros(tjm) + ' / jour') : '—';
+      var basisLabel = basis === 'apres' ? 'net après impôt' : 'net avant impôt';
+      if (goalBannerText) {
+        goalBannerText.textContent = 'Résultat calculé pour atteindre ' + formatEuros(Number(revenuCibleInput.value) || 0) + ' de ' + basisLabel + ' par mois, sur la base de ' + jours + ' jours facturés/mois.';
+      }
+      if (goalBanner) goalBanner.style.display = 'flex';
+    } else {
+      tjm = Math.max(0, Number(tjmNumber.value) || 0);
+      if (goalBanner) goalBanner.style.display = 'none';
+    }
+
+    var r = calculate(tjm, jours, statutSelect.value, activiteSelect.value, frais, acre);
+    var fd = computeFiscalDetails(base, r, activiteSelect.value, fiscalParams);
+
+    lineTjmLabel.textContent = 'TJM × ' + jours + ' jours' + (calcMode === 'net' ? ' (calculé)' : '');
+    lineTjmValue.textContent = formatEuros(tjm);
+    lineBrutValue.textContent = formatEuros(r.brut);
+    lineFraisRow.style.display = r.frais > 0 ? 'flex' : 'none';
+    lineFraisValue.textContent = '− ' + formatEuros(r.frais);
+    lineChargesLabel.textContent = '− Charges (' + r.statut.resolvedShort + ', ' + r.chargesPct + '%)';
+    lineChargesValue.textContent = '− ' + formatEuros(r.charges);
+    chargesTooltipText.textContent = r.statut.desc;
+
+    // Ligne impôt : sans elle, l'écart entre "Brut − Frais − Charges" et le Net
+    // final (qui est net APRES impôt) n'était pas justifié à l'écran, ce qui
+    // pouvait laisser croire à une erreur de calcul alors qu'il ne manquait
+    // qu'un affichage.
+    lineImpotValue.textContent = '− ' + formatEuros(fd.impotMensuel);
+    impotTooltipText.textContent = fd.vflOn
+      ? 'Versement libératoire de l\'impôt sur le revenu : ' + (fd.vflRate * 100).toFixed(1).replace('.', ',') + '% de votre chiffre d\'affaires.'
+      : 'Calculé selon le barème progressif 2026 et le quotient familial. Votre taux marginal d\'imposition (TMI) est de ' + Math.round((fd.tmi || 0) * 100) + '%. Détail complet dans Impôt, TVA et charges ci-dessous.';
+
+    var impotPct = r.brut > 0 ? Math.round((fd.impotMensuel / r.brut) * 100) : 0;
+    var netApresImpotPct = Math.max(0, 100 - r.chargesPct - r.fraisPct - impotPct);
+    barNet.style.width = netApresImpotPct + '%';
+    barCharges.style.width = r.chargesPct + '%';
+    barImpot.style.width = impotPct + '%';
+    barFrais.style.width = r.fraisPct + '%';
+
+    // Résultat principal de "Mon statut" : le Net, après charges ET après impôt
+    // sur le revenu (le détail avant/après impôt reste disponible dans le
+    // Comparatif global et dans Impôt, TVA et charges ci-dessous).
+    heroNetFiscal.textContent = formatEuros(fd.netReelMensuel);
+    statAnnuel.textContent = formatEuros(fd.netReelAnnuel);
+    statBrutAnnuel.textContent = formatEuros(r.brutAnnuel);
+
+    if (base && base.isMicro) {
+      statutHint.textContent = 'Taux détecté pour cette activité : ' + r.statut.resolvedShort.split(' · ')[1] + ' (' + Math.round(r.statut.taux * 100) + '%).';
+    } else {
+      statutHint.textContent = 'Taux moyen indicatif : ' + Math.round((base ? base.taux : 0) * 100) + '%.';
+    }
+
+    updatePlafondAlert(base, r);
+    updateTvaAlert(base, r, activiteSelect.value);
+    updateComparator(tjm, jours, activiteSelect.value, acre, frais);
+    updatePrintHeader(tjm, jours);
+
+    fiscalVflField.style.display = (base && base.isMicro) ? 'block' : 'none';
+    renderFiscalDetail(base, r, activiteSelect.value, fd);
+
+    // Le TJM lui-même n'a plus de plafond (voir plus haut), mais le curseur
+    // reste borné à 5000 € pour rester manipulable à la souris/au doigt : au-delà,
+    // il affiche simplement sa position maximale.
+    tjmRange.value = clamp(tjm, Number(tjmRange.min), Number(tjmRange.max));
+  }
+
+  function updatePlafondAlert(base, r) {
+    if (!base || !base.isMicro || r.brut <= 0) {
+      plafondAlert.style.display = 'none';
+      return;
+    }
+    var microType = r.statut.microType || 'service';
+    var seuil = PLAFOND_MICRO[microType] || PLAFOND_MICRO.service;
+    var annuel = r.brut * 12;
+    if (annuel <= seuil) {
+      plafondAlert.style.display = 'none';
+      return;
+    }
+    var mois = Math.max(1, Math.floor(seuil / r.brut));
+    plafondAlertText.textContent = '⚠️ À ce rythme (' + formatEuros(annuel) + ' / an), vous atteindriez le plafond de la micro-entreprise (' + formatEuros(seuil) + ') en environ ' + mois + ' mois. Un dépassement ponctuel une seule année civile est toléré ; c\u2019est un dépassement deux années de suite qui vous ferait basculer vers un régime réel l\u2019année suivante.';
+    plafondAlert.style.display = 'flex';
+  }
+
+  function updateTvaAlert(base, r, activiteId) {
+    if (!base || base.id === 'portage' || r.brut <= 0) {
+      tvaAlert.style.display = 'none';
+      return;
+    }
+    var activite = ACTIVITES_BY_ID[activiteId];
+    var cat = (activite && activite.microType === 'vente') ? 'vente' : 'service';
+    var seuils = TVA_FRANCHISE[cat];
+    var annuel = r.brut * 12;
+    if (annuel <= seuils.base) {
+      tvaAlert.style.display = 'none';
+      return;
+    }
+    var msg = 'À ce rythme (' + formatEuros(annuel) + ' / an), vous dépasseriez le seuil de franchise en base de TVA (' + formatEuros(seuils.base) + '). Vous devrez facturer la TVA à vos clients — souvent neutre en B2B (le client la récupère), à anticiper si vous facturez des particuliers.';
+    if (annuel > seuils.majore) {
+      msg += ' Au-delà de ' + formatEuros(seuils.majore) + ', la TVA s\u2019applique dès le mois du dépassement.';
+    } else {
+      msg += ' Un dépassement modéré une seule année reste toléré jusqu\u2019au 31 décembre.';
+    }
+    tvaAlertText.textContent = msg;
+    tvaAlert.style.display = 'flex';
+  }
+
+  function updateComparator(tjm, jours, activiteId, acre, frais) {
+    comparatorList.innerHTML = '';
+    var current = statutSelect.value;
+    var rows = STATUTS.map(function (s) {
+      var res = calculate(tjm, jours, s.id, activiteId, s.allowsFraisPro ? frais : 0, acre);
+      return { id: s.id, label: s.shortLabel, net: res.net };
+    });
+    rows.sort(function (a, b) { return b.net - a.net; });
+    rows.forEach(function (row) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'comparator-row' + (row.id === current ? ' is-current' : '');
+      var name = document.createElement('span');
+      name.className = 'name';
+      name.textContent = row.label;
+      var val = document.createElement('span');
+      val.className = 'value';
+      val.textContent = formatEuros(row.net) + ' / mois';
+      btn.appendChild(name);
+      btn.appendChild(val);
+      btn.addEventListener('click', function () {
+        statutSelect.value = row.id;
+        render();
+      });
+      comparatorList.appendChild(btn);
+    });
+  }
+
+  function updatePrintHeader(tjm, jours) {
+    var activiteLabel = activiteSelect.selectedOptions && activiteSelect.selectedOptions[0] ? activiteSelect.selectedOptions[0].textContent : '';
+    var statutLabel = statutSelect.selectedOptions && statutSelect.selectedOptions[0] ? statutSelect.selectedOptions[0].textContent : '';
+    var modeSuffix = '';
+    if (calcMode === 'net') {
+      var basisLabel = getCibleBasis() === 'apres' ? 'net après impôt' : 'net avant impôt';
+      modeSuffix = ' · TJM calculé pour ' + formatEuros(Number(revenuCibleInput.value) || 0) + ' de ' + basisLabel + '/mois';
+    }
+    printParams.textContent = 'TJM : ' + formatEuros(tjm) + ' · ' + jours + ' jours/mois · ' + activiteLabel + ' · ' + statutLabel + modeSuffix;
+    printDate.textContent = 'Simulation générée le ' + new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' sur tjmcalc.fr';
+  }
+
+  function getFiscalParams() {
+    return {
+      parts: clamp(Number(fiscalPartsInput.value) || 1, 1, 10),
+      isCouple: fiscalSituationSelect.value === 'couple',
+      autresRevenus: clamp(Number(fiscalAutresInput.value) || 0, 0, 1000000),
+      vfl: fiscalVflCheck.checked
+    };
+  }
+
+  function renderFiscalDetail(base, r, activiteId, fd) {
+    // Détail des cotisations sociales.
+    var family = getChargesFamily(base ? base.id : 'micro');
+    var rows = CHARGES_BREAKDOWN[family] || CHARGES_BREAKDOWN.tns;
+    fiscalChargesList.innerHTML = '';
+    rows.forEach(function (row) {
+      var amount = row.frac * r.charges;
+      var div = document.createElement('div');
+      div.className = 'fiscal-breakdown-row';
+      var lbl = document.createElement('span');
+      lbl.className = 'lbl';
+      lbl.appendChild(document.createTextNode(row.label + ' '));
+      var pct = document.createElement('span');
+      pct.className = 'pct';
+      pct.textContent = '(' + Math.round(row.frac * 100) + '% des charges)';
+      lbl.appendChild(pct);
+      var val = document.createElement('span');
+      val.className = 'val';
+      val.textContent = formatEuros(amount) + ' / mois';
+      div.appendChild(lbl);
+      div.appendChild(val);
+      fiscalChargesList.appendChild(div);
+    });
+    if (family === 'portage') {
+      var note = document.createElement('p');
+      note.className = 'fiscal-note';
+      note.style.margin = '.625rem .875rem 0';
+      note.textContent = 'En portage salarial, une partie de ce taux correspond aux frais de gestion de la société de portage (facturation, accompagnement), et non à des cotisations sociales.';
+      fiscalChargesList.appendChild(note);
+    } else {
+      var note2 = document.createElement('p');
+      note2.className = 'fiscal-note';
+      note2.style.margin = '.625rem .875rem 0';
+      note2.textContent = family === 'micro'
+        ? 'Répartition basée sur la structure officielle des cotisations Urssaf 2026, appliquée à votre taux réel.'
+        : 'Répartition indicative : les cotisations réelles suivent des barèmes progressifs (plafond de la Sécurité sociale, tranches de revenu).';
+      fiscalChargesList.appendChild(note2);
+    }
+
+    // Impôt sur le revenu / versement libératoire.
+    if (fd.vflOn) {
+      fiscalImposableLabel.textContent = 'Chiffre d\u2019affaires soumis au versement libératoire (annuel)';
+      fiscalImposableValue.textContent = formatEuros(r.brutAnnuel) + ' / an';
+      fiscalIrLabel.textContent = '\u2212 Versement lib\u00e9ratoire (' + (Math.round(fd.vflRate * 1000) / 10) + '%)';
+      fiscalIrValue.textContent = '\u2212 ' + formatEuros(fd.impotAnnuel) + ' / an';
+      fiscalIrTooltip.textContent = 'Le versement libératoire remplace l\u2019abattement forfaitaire et le barème progressif par un taux fixe appliqué directement à votre chiffre d\u2019affaires, payé chaque mois ou trimestre à l\u2019Urssaf en même temps que vos cotisations sociales.';
+    } else {
+      fiscalImposableLabel.textContent = 'Revenu imposable retenu (annuel)';
+      fiscalImposableValue.textContent = formatEuros(fd.revenuImposableAnnuel) + ' / an';
+      fiscalIrLabel.textContent = '\u2212 Impôt sur le revenu attribuable';
+      fiscalIrValue.textContent = '\u2212 ' + formatEuros(fd.impotAnnuel) + ' / an';
+      fiscalIrTooltip.textContent = 'Calculé selon la méthode du quotient familial (revenu imposable ÷ parts, barème 2026, puis × parts), avec application de la décote. Votre taux marginal d\u2019imposition (TMI) est de ' + Math.round(fd.tmi * 100) + '%. Si vous avez indiqué d\u2019autres revenus du foyer, seul le supplément d\u2019impôt dû à votre activité freelance est déduit de votre net ci-dessous.';
+    }
+
+    // TVA précise.
+    if (fd.tva) {
+      fiscalTvaText.textContent = 'Vous dépassez le seuil de franchise en base de TVA (' + formatEuros(fd.tva.annuelHT) + ' HT / an) : au taux standard de 20%, cela représente environ ' + formatEuros(fd.tva.tvaMensuelle) + ' de TVA à facturer en plus chaque mois. En B2B, cette TVA est généralement neutre pour vous (votre client la récupère) ; en B2C, elle s\u2019ajoute à votre prix ou réduit votre marge si vous ne pouvez pas la répercuter.';
+      fiscalTvaAlert.style.display = 'flex';
+    } else {
+      fiscalTvaAlert.style.display = 'none';
+    }
+
+    // Net fiscal réel.
+    fiscalNetMonthly.textContent = formatEuros(fd.netReelMensuel);
+    fiscalNetAnnualNote.textContent = formatEuros(fd.netReelAnnuel) + ' / an';
+  }
+
+  fiscalPartsInput.addEventListener('input', render);
+  fiscalSituationSelect.addEventListener('change', render);
+  fiscalAutresInput.addEventListener('input', render);
+  fiscalVflCheck.addEventListener('change', render);
+
+  function onTjmNumberInput() { render(); }
+  function onTjmRangeInput() { tjmNumber.value = tjmRange.value; render(); }
+
+  // Boutons +/- : ajustement fin du TJM par pas de 10 €, plus précis que le
+  // slider sur mobile (où un simple effleurement peut faire varier le TJM de 50 €).
+  // Aucune limite haute : un TJM tapé ou atteint via les boutons peut dépasser 5000 €.
+  function stepTjm(delta) {
+    var current = Math.max(0, Number(tjmNumber.value) || 0);
+    tjmNumber.value = Math.max(0, current + delta);
+    render();
+  }
+  if (tjmStepUp) tjmStepUp.addEventListener('click', function () { stepTjm(10); });
+  if (tjmStepDown) tjmStepDown.addEventListener('click', function () { stepTjm(-10); });
+
+  tjmNumber.addEventListener('input', onTjmNumberInput);
+  tjmRange.addEventListener('input', onTjmRangeInput);
+  joursInput.addEventListener('input', render);
+  activiteSelect.addEventListener('change', render);
+  statutSelect.addEventListener('change', render);
+  acreCheck.addEventListener('change', render);
+  fraisInput.addEventListener('input', render);
+
+  // ---------- Calcul inversé : bascule de mode et champ de revenu visé ----------
+  modeTabTjm.addEventListener('click', function () { setCalcMode('tjm'); });
+  modeTabNet.addEventListener('click', function () { setCalcMode('net'); });
+  revenuCibleInput.addEventListener('input', render);
+  cibleBasisRadios.forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      cibleBasisRadios.forEach(function (r) {
+        var pill = r.closest('.radio-pill');
+        if (pill) pill.classList.toggle('is-checked', r.checked);
+      });
+      render();
+    });
+  });
+
+  // ---------- Lien de partage (query params tjm, jours, statut, act, acre, frais) ----------
+  function applyQueryParams() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var tjmParam = params.get('tjm');
+      var joursParam = params.get('jours');
+      var actParam = params.get('act');
+      var statutParam = params.get('statut');
+      var acreParam = params.get('acre');
+      var fraisParam = params.get('frais');
+      var partsParam = params.get('parts');
+      var situationParam = params.get('sit');
+      var autresParam = params.get('autres');
+      var vflParam = params.get('vfl');
+      var modeParam = params.get('mode');
+      var cibleParam = params.get('cible');
+      var baseCibleParam = params.get('basecible');
+
+      if (tjmParam !== null) {
+        var tjmVal = Math.max(0, Number(tjmParam) || 0);
+        if (tjmVal > 0) tjmNumber.value = tjmVal;
+      }
+      if (joursParam !== null) {
+        var joursVal = clamp(Number(joursParam) || 0, 1, 31);
+        if (joursVal > 0) joursInput.value = joursVal;
+      }
+      if (actParam && ACTIVITES_BY_ID[actParam]) {
+        activiteSelect.value = actParam;
+      }
+      if (statutParam && STATUTS_BY_ID[statutParam]) {
+        statutSelect.value = statutParam;
+      }
+      if (acreParam === '1') {
+        acreCheck.checked = true;
+      }
+      if (fraisParam !== null) {
+        var fraisVal = clamp(Number(fraisParam) || 0, 0, 50000);
+        fraisInput.value = fraisVal;
+      }
+      if (partsParam !== null) {
+        var partsVal = clamp(Number(partsParam) || 1, 1, 10);
+        if (partsVal > 0) fiscalPartsInput.value = partsVal;
+      }
+      if (situationParam === 'couple' || situationParam === 'single') {
+        fiscalSituationSelect.value = situationParam;
+      }
+      if (autresParam !== null) {
+        var autresVal = clamp(Number(autresParam) || 0, 0, 1000000);
+        fiscalAutresInput.value = autresVal;
+      }
+      if (vflParam === '1') {
+        fiscalVflCheck.checked = true;
+      }
+      if (cibleParam !== null) {
+        var cibleVal = Math.max(0, Number(cibleParam) || 0);
+        if (cibleVal > 0) revenuCibleInput.value = cibleVal;
+      }
+      if (baseCibleParam === 'avant' || baseCibleParam === 'apres') {
+        cibleBasisRadios.forEach(function (radio) {
+          radio.checked = (radio.value === baseCibleParam);
+          var pill = radio.closest('.radio-pill');
+          if (pill) pill.classList.toggle('is-checked', radio.checked);
+        });
+      }
+      if (modeParam === 'net') {
+        setCalcMode('net');
+      }
+    } catch (e) {
+      // Lien malformé : on ignore silencieusement et on garde les valeurs par défaut.
+    }
+  }
+
+  function buildShareUrl() {
+    var params = new URLSearchParams();
+    params.set('tjm', tjmNumber.value);
+    params.set('jours', joursInput.value);
+    params.set('statut', statutSelect.value);
+    params.set('act', activiteSelect.value);
+    if (acreCheck.checked) params.set('acre', '1');
+    if (Number(fraisInput.value) > 0) params.set('frais', fraisInput.value);
+    if (Number(fiscalPartsInput.value) > 1) params.set('parts', fiscalPartsInput.value);
+    if (fiscalSituationSelect.value === 'couple') params.set('sit', 'couple');
+    if (Number(fiscalAutresInput.value) > 0) params.set('autres', fiscalAutresInput.value);
+    if (fiscalVflCheck.checked) params.set('vfl', '1');
+    if (calcMode === 'net') {
+      params.set('mode', 'net');
+      params.set('cible', revenuCibleInput.value);
+      params.set('basecible', getCibleBasis());
+    }
+    return window.location.origin + window.location.pathname + '?' + params.toString();
+  }
+
+  function flashCopied(btn, labelEl, restoreLabel, copiedLabel) {
+    var icon = btn.querySelector('svg use');
+    var originalHref = icon ? icon.getAttribute('href') : null;
+    labelEl.textContent = copiedLabel;
+    btn.classList.add('is-copied');
+    if (icon) icon.setAttribute('href', '#i-check');
+    setTimeout(function () {
+      labelEl.textContent = restoreLabel;
+      btn.classList.remove('is-copied');
+      if (icon && originalHref) icon.setAttribute('href', originalHref);
+    }, 2000);
+  }
+
+  function showShareCopied() {
+    flashCopied(btnShare, btnShareLabel, 'Copier le lien de cette simulation', 'Lien copié !');
+  }
+
+  btnShare.addEventListener('click', function () {
+    var url = buildShareUrl();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(showShareCopied, function () {
+        window.prompt('Copiez ce lien :', url);
+      });
+    } else {
+      window.prompt('Copiez ce lien :', url);
+    }
+  });
+
+  // ---------- Export PDF (window.print() + feuille de style @media print) ----------
+  btnPrint.addEventListener('click', function () { window.print(); });
+
+  // ---------- Widget embarquable (mode ?embed=1 + snippet <iframe> à copier) ----------
+  function initEmbedMode() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('embed') === '1') {
+      document.body.classList.add('is-embed');
+      var footerContainer = document.querySelector('footer.site .container');
+      if (footerContainer) {
+        footerContainer.innerHTML = '';
+        var p = document.createElement('p');
+        var a = document.createElement('a');
+        a.href = 'https://tjmcalc.fr';
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = 'TJMCalc.fr';
+        p.appendChild(document.createTextNode('Simulateur fourni par '));
+        p.appendChild(a);
+        p.appendChild(document.createTextNode(' — estimation pédagogique, hors conseil personnalisé.'));
+        footerContainer.appendChild(p);
+      }
+    }
+  }
+
+  function buildEmbedSnippet() {
+    return '<iframe src="https://tjmcalc.fr/?embed=1" width="100%" height="900" style="border:0;border-radius:12px;max-width:640px" loading="lazy" title="Simulateur TJM vers salaire net freelance"></iframe>';
+  }
+
+  if (embedCodeText) embedCodeText.textContent = buildEmbedSnippet();
+
+  if (btnCopyEmbed) {
+    btnCopyEmbed.addEventListener('click', function () {
+      var snippet = buildEmbedSnippet();
+      function done() {
+        flashCopied(btnCopyEmbed, btnCopyEmbedLabel, 'Copier le code d\u2019intégration', 'Code copié !');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(snippet).then(done, function () { window.prompt('Copiez ce code :', snippet); });
+      } else {
+        window.prompt('Copiez ce code :', snippet);
+      }
+    });
+  }
+
+  // ---------- Tooltips : on les repositionne pour qu'elles restent toujours
+  // visibles à l'écran (sinon la bulle peut déborder à droite ou à gauche
+  // sur mobile et forcer un scroll horizontal). ----------
+  function clampTooltip(details) {
+    var content = details.querySelector('.tooltip-content');
+    if (!content) return;
+    content.style.transform = 'translateX(-50%)';
+    var margin = 12;
+    var rect = content.getBoundingClientRect();
+    var overflowRight = rect.right - (window.innerWidth - margin);
+    var overflowLeft = margin - rect.left;
+    if (overflowRight > 0) {
+      content.style.transform = 'translateX(calc(-50% - ' + Math.ceil(overflowRight) + 'px))';
+    } else if (overflowLeft > 0) {
+      content.style.transform = 'translateX(calc(-50% + ' + Math.ceil(overflowLeft) + 'px))';
+    }
+  }
+
+  function initTooltips() {
+    var tooltips = document.querySelectorAll('.tooltip');
+    for (var i = 0; i < tooltips.length; i++) {
+      (function (details) {
+        details.addEventListener('toggle', function () {
+          if (details.open) {
+            // On ferme les autres bulles ouvertes, puis on mesure au prochain
+            // repaint pour connaître la position réelle de celle-ci.
+            tooltips.forEach(function (other) { if (other !== details) other.open = false; });
+            requestAnimationFrame(function () { clampTooltip(details); });
+          }
+        });
+      })(tooltips[i]);
+    }
+
+    // Sur mobile, cliquer n'importe où en dehors d'une bulle ouverte la referme
+    // (sinon il fallait recliquer précisément sur la petite icône ⓘ).
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.tooltip')) return;
+      tooltips.forEach(function (t) { if (t.open) t.open = false; });
+    });
+  }
+
+  // Les liens internes (ex. "Options fiscales" depuis le bloc Résultats) qui
+  // pointent vers un <details> (accordéon) l'ouvrent avant de faire défiler
+  // la page jusqu'à lui, plutôt que de faire atterrir l'utilisateur sur un
+  // bloc replié.
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var target = document.getElementById(link.getAttribute('href').slice(1));
+    if (target && target.tagName === 'DETAILS') target.open = true;
+  });
+
+  // ---------- Onglets du bloc Résultats : "Mon statut" / "Comparatif global" ----------
+  function initResultsTabs() {
+    if (!resultsTabMystat || !resultsTabComparator) return;
+    var buttons = [resultsTabMystat, resultsTabComparator];
+    var panels = [tabPanelMystat, tabPanelComparator];
+    function activate(activeBtn, activePanel) {
+      buttons.forEach(function (b) { b.classList.toggle('is-active', b === activeBtn); b.setAttribute('aria-selected', b === activeBtn ? 'true' : 'false'); });
+      panels.forEach(function (p) { if (p) p.hidden = (p !== activePanel); });
+    }
+    resultsTabMystat.addEventListener('click', function () { activate(resultsTabMystat, tabPanelMystat); });
+    resultsTabComparator.addEventListener('click', function () { activate(resultsTabComparator, tabPanelComparator); });
+  }
+
+  populateSelects();
+  applyQueryParams();
+  initEmbedMode();
+  populateFaq();
+  initTooltips();
+  initResultsTabs();
+  render();
+})();
+</script>
+</body>
+</html>
