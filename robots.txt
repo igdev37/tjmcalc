@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-
+Disallow: /*?embed=1
+Disallow: /*?*embed=1
 Sitemap: https://tjmcalc.com/sitemap.xml
