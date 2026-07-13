@@ -1,0 +1,32 @@
+# TJMCalc
+
+> TJMCalc est un calculateur gratuit en français qui aide les freelances et indépendants à convertir un taux journalier moyen (TJM) en chiffre d'affaires et en revenu net estimé.
+
+Les calculs sont pédagogiques. Ils distinguent le chiffre d'affaires, les frais, les cotisations sociales et l'impôt sur le revenu selon le statut et l'activité. Ils ne remplacent pas un conseil comptable, fiscal ou juridique personnalisé. Les hypothèses, les limites et les sources officielles sont publiées sur le site.
+
+## Calculateur et outils
+
+- [Calculateur TJM en revenu net](https://tjmcalc.com/): Simuler un revenu mensuel et annuel à partir du TJM, du nombre de jours, de l'activité et du statut.
+- [Outils pour freelances](https://tjmcalc.com/outils/): Convertisseurs de taux horaire, salaire CDI, revenu cible, jours facturables et seuil de rentabilité.
+- [Widget calculateur TJM](https://tjmcalc.com/integrer-calculateur-tjm/): Code responsive pour intégrer gratuitement le simulateur sur un site avec attribution.
+- [TJM par métier](https://tjmcalc.com/tjm/): Repères et hypothèses pour plus de 60 activités indépendantes.
+- [TJM en salaire net](https://tjmcalc.com/revenus/): Simulations par niveau de TJM, de 150 à 1 500 euros.
+
+## Comprendre et vérifier
+
+- [Méthodologie des calculs](https://tjmcalc.com/methodologie/): Formules, hypothèses et limites du simulateur.
+- [Sources officielles](https://tjmcalc.com/sources/): Références Urssaf, Service Public et DGFiP utilisées pour documenter les règles.
+- [Guides sur le TJM](https://tjmcalc.com/guides/): Méthodes pour calculer, négocier et présenter un TJM.
+- [Comparer les statuts](https://tjmcalc.com/statuts/): Micro-entreprise, EI, EURL, SASU, SAS et portage salarial.
+- [Baromètre TJM](https://tjmcalc.com/barometre/): Fourchettes éditoriales indicatives, distinctes de statistiques officielles.
+
+## À propos
+
+- [À propos de TJMCalc](https://tjmcalc.com/a-propos/): Objectif, périmètre éditorial et engagements de transparence.
+- [Contacter TJMCalc](https://tjmcalc.com/contact/): Signaler une erreur ou proposer une correction documentée.
+- [Politique de confidentialité](https://tjmcalc.com/politique-de-confidentialite/): Calculs locaux, stockage et services tiers.
+
+## Optional
+
+- [Plan du site XML](https://tjmcalc.com/sitemap.xml): Liste exhaustive des URL indexables.
+- [Flux des guides](https://tjmcalc.com/guides/feed.xml): Dernières publications éditoriales.

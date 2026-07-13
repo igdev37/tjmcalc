@@ -1,7 +1,7 @@
 :root{
   color-scheme:light dark;
   --page-bg:#fff;--surface:#fff;--surface-alt:#f8fafc;--surface-raised:#fff;--surface-hover:#f1f5f9;
-  --text-primary:#0f172a;--text-strong:#1e293b;--text-secondary:#475569;--text-muted:#64748b;--text-faint:#94a3b8;
+  --text-primary:#0f172a;--text-strong:#1e293b;--text-secondary:#475569;--text-muted:#64748b;--text-faint:#64748b;
   --border:#e2e8f0;--border-strong:#cbd5e1;--emerald-50:#ecfdf5;--emerald-100:#d1fae5;--emerald-400:#34d399;--emerald-500:#10b981;--emerald-600:#059669;--emerald-700:#047857;
   --amber-50:#fffbeb;--amber-200:#fde68a;--amber-700:#b45309;--blue-50:#eff6ff;--blue-600:#2563eb;
   --shadow-card:0 1px 2px rgba(15,23,42,.04),0 12px 32px rgba(15,23,42,.055);--shadow-hover:0 18px 44px rgba(15,23,42,.1);
@@ -9,14 +9,14 @@
 }
 [data-theme="dark"]{
   --page-bg:#0a0f1a;--surface:#131b2c;--surface-alt:#0f1626;--surface-raised:#151f33;--surface-hover:#1a2338;
-  --text-primary:#f1f5f9;--text-strong:#e2e8f0;--text-secondary:#cbd5e1;--text-muted:#94a3b8;--text-faint:#64748b;
+  --text-primary:#f1f5f9;--text-strong:#e2e8f0;--text-secondary:#cbd5e1;--text-muted:#94a3b8;--text-faint:#94a3b8;
   --border:#26314a;--border-strong:#3a4a6b;--emerald-50:#0d2b22;--emerald-100:#10372c;--emerald-700:#34d399;
   --amber-50:#2a2110;--amber-200:#5c4813;--amber-700:#fbbf24;--blue-50:#12233d;--blue-600:#93c5fd;
   --shadow-card:0 1px 3px rgba(0,0,0,.35),0 16px 40px rgba(0,0,0,.18);--shadow-hover:0 20px 48px rgba(0,0,0,.35);
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --page-bg:#0a0f1a;--surface:#131b2c;--surface-alt:#0f1626;--surface-raised:#151f33;--surface-hover:#1a2338;
-  --text-primary:#f1f5f9;--text-strong:#e2e8f0;--text-secondary:#cbd5e1;--text-muted:#94a3b8;--text-faint:#64748b;
+  --text-primary:#f1f5f9;--text-strong:#e2e8f0;--text-secondary:#cbd5e1;--text-muted:#94a3b8;--text-faint:#94a3b8;
   --border:#26314a;--border-strong:#3a4a6b;--emerald-50:#0d2b22;--emerald-100:#10372c;--emerald-700:#34d399;
   --amber-50:#2a2110;--amber-200:#5c4813;--amber-700:#fbbf24;--blue-50:#12233d;--blue-600:#93c5fd;
   --shadow-card:0 1px 3px rgba(0,0,0,.35),0 16px 40px rgba(0,0,0,.18);--shadow-hover:0 20px 48px rgba(0,0,0,.35);
@@ -55,6 +55,7 @@
 
 /* Outils */
 .tool-panel{margin-bottom:1.25rem;padding:1.6rem;border:1px solid color-mix(in srgb,var(--emerald-600) 32%,var(--border));border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow-card)}.tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.tool-field label{display:block;margin-bottom:.35rem;color:var(--text-strong);font-size:.85rem;font-weight:650}.tool-field input,.tool-field select{width:100%;min-height:2.75rem;border:1px solid var(--border-strong);border-radius:.62rem;padding:.62rem .75rem;background:var(--page-bg);color:var(--text-primary);font:inherit}.tool-field input:focus,.tool-field select:focus{border-color:var(--emerald-500);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--emerald-500) 16%,transparent)}.tool-result{display:block;margin:1.3rem 0 0;padding:1.25rem;border:1px solid color-mix(in srgb,var(--emerald-600) 28%,var(--border));border-radius:.8rem;background:var(--emerald-50)}.tool-result>span{display:block;color:var(--text-muted);font-size:.8rem}.tool-result strong{display:block;margin:.1rem 0;color:var(--emerald-700);font:750 clamp(1.5rem,5vw,2.2rem)/1.25 var(--font-mono)}.tool-result p{margin:.35rem 0 0;color:var(--text-secondary);font-size:.85rem}
+.embed-snippet{max-width:100%;margin:1rem 0;overflow:auto;padding:1rem;border:1px solid var(--border);border-radius:.75rem;background:var(--surface-alt);color:var(--text-strong);white-space:pre-wrap;overflow-wrap:anywhere}.embed-snippet code{font:500 .78rem/1.55 var(--font-mono)}
 
 /* Pied de page */
 .email-protected{display:inline-flex;align-items:center;gap:.6rem}.protected-email{display:inline-flex;align-items:center;min-height:2.5rem;padding:.55rem .8rem;border:1px solid color-mix(in srgb,var(--emerald-600) 38%,var(--border));border-radius:.62rem;background:var(--emerald-50);font-family:var(--font-mono);font-size:.88rem;font-weight:700;text-decoration:none}.protected-email:hover{border-color:var(--emerald-500);background:var(--emerald-100);text-decoration:none}
