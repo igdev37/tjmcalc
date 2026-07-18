@@ -186,6 +186,8 @@
   .checkbox-row { display:flex; align-items:center; gap:.5rem; cursor:pointer; }
   .checkbox-row input[type="checkbox"] { width:1rem; height:1rem; flex-shrink:0; accent-color:var(--emerald-600); cursor:pointer; }
   .checkbox-row span { font-size:.875rem; font-weight:500; color:var(--text-strong); }
+  .checkbox-row.is-disabled { cursor:not-allowed; opacity:.55; }
+  #eligibility-notice { color:#9a3412; font-weight:600; }
 
   /* Accordéon "Options fiscales (optionnel)" à l'intérieur du bloc Vos paramètres */
   .field-accordion { margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--border-soft); }
@@ -551,15 +553,16 @@
             <svg class="icon"><use href="#i-chevron"></use></svg>
           </div>
           <p class="field-hint" id="statut-hint"></p>
+          <p class="field-hint" id="eligibility-notice" role="status" aria-live="polite" hidden></p>
         </div>
 
         <div class="field">
           <label class="checkbox-row" for="acre-check">
             <input type="checkbox" id="acre-check">
-            <span>Je bénéficie de l'ACRE (1ʳᵉ année d'activité)</span>
+            <span>J’estime être éligible à l’ACRE en micro-entreprise</span>
             <details class="tooltip">
               <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
-              <div class="tooltip-content">Depuis le 1ᵉʳ juillet 2026, l'ACRE réduit les cotisations de 25% la 1ʳᵉ année (au lieu de 50% auparavant) et n'est plus ouverte à tous les créateurs : elle est réservée à certains profils (demandeurs d'emploi, 18-25 ans, bénéficiaires du RSA, quartiers prioritaires...). Vérifiez votre éligibilité avant de cocher.</div>
+              <div class="tooltip-content">Cette option applique uniquement l’abattement simplifié prévu par le simulateur pour la micro-entreprise. Les règles ACRE hors micro dépendent de la situation et ne sont pas modélisées ici. Vérifiez toujours votre éligibilité auprès de l’Urssaf.</div>
             </details>
           </label>
         </div>
@@ -573,7 +576,7 @@
             </details>
           </label>
           <input type="number" class="field-input" id="frais-input" min="0" max="50000" value="0" inputmode="numeric">
-          <p class="field-hint">Matériel, mutuelle, comptable, loyer... Ces frais réels sont déduits du chiffre d'affaires avant application des charges (non disponible en micro-entreprise, où l'abattement forfaitaire les remplace déjà).</p>
+          <p class="field-hint">Matériel, mutuelle, comptable, loyer… En micro-entreprise, ces frais réduisent votre disponible mais pas l’assiette des cotisations ; au réel, le simulateur les retire avant le taux moyen de charges.</p>
         </div>
 
         <details class="field-accordion" id="fiscal-options-accordion">
@@ -895,8 +898,8 @@
       { id: 'dropshipping', label: 'Dropshipping', microType: 'vente' }
     ]},
     { id: 'sante', label: 'Santé', activites: [
-      { id: 'infirmier', label: 'Infirmier', microType: 'cipav' },
-      { id: 'kinesitherapeute', label: 'Kinésithérapeute', microType: 'cipav' },
+      { id: 'infirmier', label: 'Infirmier', microType: 'cipav', microEligible: false },
+      { id: 'kinesitherapeute', label: 'Kinésithérapeute', microType: 'cipav', microEligible: false },
       { id: 'osteopathe', label: 'Ostéopathe', microType: 'cipav' },
       { id: 'psychologue', label: 'Psychologue', microType: 'cipav' },
       { id: 'dieteticien', label: 'Diététicien', microType: 'cipav' }
@@ -942,11 +945,11 @@
     var base = STATUTS_BY_ID[statutId] || STATUTS[0];
     // ACRE (depuis le 1er juillet 2026) : réduction de 25% des cotisations la 1ʳᵉ année,
     // réservée à certains profils éligibles. Ne s'applique pas au portage salarial (statut salarié).
-    var acreOn = !!acre && statutId !== 'portage';
+    // L'ACRE est modélisée uniquement pour la micro-entreprise. Hors micro,
+    // son calcul dépend du revenu et de la situation du créateur.
+    var acreOn = !!acre && !!base.isMicro;
     if (!base.isMicro) {
-      var tauxNS = acreOn ? base.taux * 0.75 : base.taux;
-      var descNS = base.desc + (acreOn ? ' Taux réduit avec l\u2019ACRE (\u201325% la 1ʳᵉ année).' : '');
-      return { taux: tauxNS, resolvedShort: base.shortLabel, desc: descNS };
+      return { taux: base.taux, resolvedShort: base.shortLabel, desc: base.desc };
     }
     var activite = ACTIVITES_BY_ID[activiteId];
     var microType = activite ? activite.microType : 'service';
@@ -967,12 +970,12 @@
     var safeTjm = Math.max(0, Number(tjm) || 0);
     var safeJours = Math.max(0, Number(jours) || 0);
     var brut = safeTjm * safeJours;
-    // Frais professionnels réels : déductibles en société, pas en micro (déjà couvert par
-    // l'abattement forfaitaire) ni en portage (frais de gestion déjà intégrés au taux).
-    var safeFrais = base.allowsFraisPro ? Math.max(0, Math.min(Number(fraisPro) || 0, brut)) : 0;
-    var assiette = Math.max(0, brut - safeFrais);
+    // Les frais micro réduisent le revenu disponible, mais pas l'assiette des
+    // cotisations. Au réel, ils sont retirés avant le taux moyen simplifié.
+    var safeFrais = base.id !== 'portage' ? Math.max(0, Math.min(Number(fraisPro) || 0, brut)) : 0;
+    var assiette = base.isMicro ? brut : Math.max(0, brut - safeFrais);
     var charges = assiette * statut.taux;
-    var net = assiette - charges;
+    var net = brut - safeFrais - charges;
     var fraisPct = brut > 0 ? Math.round((safeFrais / brut) * 100) : 0;
     var chargesPct = brut > 0 ? Math.round((charges / brut) * 100) : 0;
     var netPct = Math.max(0, 100 - chargesPct - fraisPct);
@@ -1148,8 +1151,8 @@
     out.netReelMensuel = out.netReelAnnuel / 12;
     out.impotMensuel = out.impotAnnuel / 12;
 
-    // TVA précise : au-delà du seuil de franchise en base, la TVA doit être facturée
-    // en plus (elle n'est pas un revenu pour vous, sauf régularisation).
+    // Projection TVA : le seuil annuel seul ne suffit pas à déterminer la date
+    // de sortie, qui dépend aussi de l'historique de chiffre d'affaires.
     var activiteObj = ACTIVITES_BY_ID[activiteId];
     var catTva = (activiteObj && activiteObj.microType === 'vente') ? 'vente' : 'service';
     var seuils = TVA_FRANCHISE[catTva];
@@ -1157,7 +1160,9 @@
       out.tva = {
         annuelHT: r.brutAnnuel,
         tvaAnnuelle: r.brutAnnuel * TVA_TAUX_STANDARD,
-        tvaMensuelle: r.brut * TVA_TAUX_STANDARD
+        tvaMensuelle: r.brut * TVA_TAUX_STANDARD,
+        seuilBase: seuils.base,
+        seuilMajore: seuils.majore
       };
     } else {
       out.tva = null;
@@ -1194,6 +1199,7 @@
       guard++;
     }
     hi = Math.min(hi, HARD_CAP);
+    if (netForTjm(hi, jours, statutId, activiteId, fraisPro, acre, basis, fiscalParams) < target) return null;
 
     var lo = 0;
     for (var i = 0; i < 60; i++) {
@@ -1212,6 +1218,7 @@
   var activiteSelect = document.getElementById('activite-select');
   var statutSelect = document.getElementById('statut-select');
   var statutHint = document.getElementById('statut-hint');
+  var eligibilityNotice = document.getElementById('eligibility-notice');
   var acreCheck = document.getElementById('acre-check');
   var fraisField = document.getElementById('frais-field');
   var fraisInput = document.getElementById('frais-input');
@@ -1302,6 +1309,23 @@
     statutSelect.value = 'micro';
   }
 
+  function syncStatusEligibility() {
+    var activite = ACTIVITES_BY_ID[activiteSelect.value];
+    var microOption = statutSelect.querySelector('option[value="micro"]');
+    var microAllowed = !activite || activite.microEligible !== false;
+    if (microOption) microOption.disabled = !microAllowed;
+    if (!microAllowed && statutSelect.value === 'micro') statutSelect.value = 'ei';
+
+    eligibilityNotice.hidden = microAllowed;
+    eligibilityNotice.textContent = microAllowed ? '' : 'Cette profession réglementée ne peut pas exercer sous le régime micro-entrepreneur. Le simulateur sélectionne donc l’entreprise individuelle ; vérifiez votre régime auprès de l’Urssaf.';
+
+    var selectedStatus = STATUTS_BY_ID[statutSelect.value];
+    var acreAvailable = !!selectedStatus && !!selectedStatus.isMicro && microAllowed;
+    acreCheck.disabled = !acreAvailable;
+    if (!acreAvailable) acreCheck.checked = false;
+    acreCheck.closest('.checkbox-row').classList.toggle('is-disabled', !acreAvailable);
+  }
+
   function populateFaq() {
     FAQS.forEach(function (faq) {
       var details = document.createElement('details');
@@ -1349,11 +1373,12 @@
   }
 
   function render() {
+    syncStatusEligibility();
     var jours = clamp(Number(joursInput.value) || 0, 0, 31);
     var acre = acreCheck.checked;
     var base = STATUTS_BY_ID[statutSelect.value];
-    fraisField.style.display = (base && base.allowsFraisPro) ? 'block' : 'none';
-    var frais = (base && base.allowsFraisPro) ? fraisInput.value : 0;
+    fraisField.style.display = (base && base.id !== 'portage') ? 'block' : 'none';
+    var frais = (base && base.id !== 'portage') ? fraisInput.value : 0;
     var fiscalParams = getFiscalParams();
 
     // TJM sans aucune limite haute : un utilisateur qui vise un TJM très élevé
@@ -1363,19 +1388,24 @@
     if (calcMode === 'net') {
       var basis = getCibleBasis();
       var solved = solveTjmForTargetNet(revenuCibleInput.value, jours, statutSelect.value, activiteSelect.value, frais, acre, basis, fiscalParams);
+      var impossibleTarget = solved === null;
       // Arrondi au centime supérieur : les montants affichés restent arrondis à
       // l'euro (comme partout ailleurs dans l'outil), mais le calcul sous-jacent
       // garde assez de précision pour que le net obtenu corresponde exactement
       // à l'objectif visé, plutôt que d'accumuler quelques euros d'écart.
-      tjm = Math.ceil(solved * 100) / 100;
-      tjmNumber.value = tjm;
-      tjmRequisValue.textContent = tjm > 0 ? (formatEuros(tjm) + ' / jour') : '—';
+      tjm = impossibleTarget ? 0 : Math.ceil(solved * 100) / 100;
+      tjmNumber.value = impossibleTarget ? '' : tjm;
+      tjmRequisValue.textContent = impossibleTarget ? 'Cible hors plage' : (tjm > 0 ? (formatEuros(tjm) + ' / jour') : '—');
+      revenuCibleInput.setAttribute('aria-invalid', String(impossibleTarget));
       var basisLabel = basis === 'apres' ? 'net après impôt' : 'net avant impôt';
       if (goalBannerText) {
-        goalBannerText.textContent = 'Résultat calculé pour atteindre ' + formatEuros(Number(revenuCibleInput.value) || 0) + ' de ' + basisLabel + ' par mois, sur la base de ' + jours + ' jours facturés/mois.';
+        goalBannerText.textContent = impossibleTarget
+          ? 'Cette cible ne peut pas être atteinte dans la borne de sécurité du simulateur. Vérifiez le montant, le nombre de jours et le statut saisis.'
+          : 'Résultat calculé pour atteindre ' + formatEuros(Number(revenuCibleInput.value) || 0) + ' de ' + basisLabel + ' par mois, sur la base de ' + jours + ' jours facturés/mois.';
       }
       if (goalBanner) goalBanner.style.display = 'flex';
     } else {
+      revenuCibleInput.setAttribute('aria-invalid', 'false');
       tjm = Math.max(0, Number(tjmNumber.value) || 0);
       if (goalBanner) goalBanner.style.display = 'none';
     }
@@ -1465,12 +1495,13 @@
       tvaAlert.style.display = 'none';
       return;
     }
-    var msg = 'À ce rythme (' + formatEuros(annuel) + ' / an), vous dépasseriez le seuil de franchise en base de TVA (' + formatEuros(seuils.base) + '). Vous devrez facturer la TVA à vos clients — souvent neutre en B2B (le client la récupère), à anticiper si vous facturez des particuliers.';
+    var msg = 'À ce rythme (' + formatEuros(annuel) + ' / an), vous dépasseriez le seuil de base de la franchise de TVA (' + formatEuros(seuils.base) + '). Le moment exact de sortie dépend du chiffre d’affaires de l’année précédente et de l’année en cours : vérifiez la date d’effet avant d’émettre une facture.';
     if (annuel > seuils.majore) {
-      msg += ' Au-delà de ' + formatEuros(seuils.majore) + ', la TVA s\u2019applique dès le mois du dépassement.';
+      msg += ' Le seuil majoré de ' + formatEuros(seuils.majore) + ' serait aussi franchi : la franchise cesse alors dès la date du dépassement.';
     } else {
-      msg += ' Un dépassement modéré une seule année reste toléré jusqu\u2019au 31 décembre.';
+      msg += ' Tant que le seuil majoré n’est pas franchi, le maintien de la franchise dépend notamment du respect du seuil de base l’année précédente.';
     }
+    msg += ' La TVA collectée est généralement récupérable par un client professionnel assujetti, contrairement à un particulier.';
     tvaAlertText.textContent = msg;
     tvaAlert.style.display = 'flex';
   }
@@ -1478,8 +1509,12 @@
   function updateComparator(tjm, jours, activiteId, acre, frais) {
     comparatorList.innerHTML = '';
     var current = statutSelect.value;
-    var rows = STATUTS.map(function (s) {
-      var res = calculate(tjm, jours, s.id, activiteId, s.allowsFraisPro ? frais : 0, acre);
+    var activite = ACTIVITES_BY_ID[activiteId];
+    var comparableStatuses = STATUTS.filter(function (s) {
+      return !(s.isMicro && activite && activite.microEligible === false);
+    });
+    var rows = comparableStatuses.map(function (s) {
+      var res = calculate(tjm, jours, s.id, activiteId, s.id !== 'portage' ? frais : 0, acre);
       return { id: s.id, label: s.shortLabel, net: res.net };
     });
     rows.sort(function (a, b) { return b.net - a.net; });
@@ -1580,7 +1615,10 @@
 
     // TVA précise.
     if (fd.tva) {
-      fiscalTvaText.textContent = 'Vous dépassez le seuil de franchise en base de TVA (' + formatEuros(fd.tva.annuelHT) + ' HT / an) : au taux standard de 20%, cela représente environ ' + formatEuros(fd.tva.tvaMensuelle) + ' de TVA à facturer en plus chaque mois. En B2B, cette TVA est généralement neutre pour vous (votre client la récupère) ; en B2C, elle s\u2019ajoute à votre prix ou réduit votre marge si vous ne pouvez pas la répercuter.';
+      var tvaTiming = fd.tva.annuelHT > fd.tva.seuilMajore
+        ? 'Le seuil majoré est également franchi : la franchise cesserait à la date du dépassement.'
+        : 'Sous le seuil majoré, la date de sortie dépend aussi du chiffre d’affaires de l’année précédente.';
+      fiscalTvaText.textContent = 'Projection : ' + formatEuros(fd.tva.annuelHT) + ' HT / an, au-dessus du seuil de base de ' + formatEuros(fd.tva.seuilBase) + '. ' + tvaTiming + ' Une fois assujetti, le taux standard représenterait environ ' + formatEuros(fd.tva.tvaMensuelle) + ' de TVA collectée par mois ; vérifiez votre date d’effet avant facturation.';
       fiscalTvaAlert.style.display = 'flex';
     } else {
       fiscalTvaAlert.style.display = 'none';
@@ -1613,7 +1651,7 @@
   tjmNumber.addEventListener('input', onTjmNumberInput);
   tjmRange.addEventListener('input', onTjmRangeInput);
   joursInput.addEventListener('input', render);
-  activiteSelect.addEventListener('change', render);
+  activiteSelect.addEventListener('change', function () { syncStatusEligibility(); render(); });
   statutSelect.addEventListener('change', render);
   acreCheck.addEventListener('change', render);
   fraisInput.addEventListener('input', render);
@@ -1866,6 +1904,7 @@
 
   populateSelects();
   applyQueryParams();
+  syncStatusEligibility();
   initEmbedMode();
   populateFaq();
   initTooltips();
