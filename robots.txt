@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /assets/favicon-96.png
+Allow: /assets/apple-touch-icon.png
 Disallow: /*?embed=1
 Disallow: /*?*embed=1
 Sitemap: https://tjmcalc.com/sitemap.xml
