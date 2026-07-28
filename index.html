@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Simulateur TJM → Salaire Net Freelance | Calcul Gratuit</title>
-<meta name="description" content="Calculez votre revenu net freelance à partir de votre TJM. Simulateur gratuit pour plus de 60 activités, en micro, société ou portage.">
+<meta name="description" content="Calculez votre revenu net freelance à partir de votre TJM avec hypothèses visibles, comparaison de statuts, méthode, limites et sources officielles.">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
@@ -383,11 +384,16 @@
   .home-editorial { padding-top:2.5rem; padding-bottom:4rem; }
   .home-editorial > h2 { margin:0; font-size:1.7rem; }
   .card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:1.5rem 0 0; }
-  .link-card { min-width:0; padding:1.3rem; border:1px solid var(--border); border-radius:1rem; background:var(--surface); box-shadow:var(--shadow-card); }
+  .link-card { position:relative; min-width:0; padding:1.3rem; border:1px solid var(--border); border-radius:1rem; background:var(--surface); box-shadow:var(--shadow-card); transition:border-color .15s, box-shadow .15s, transform .15s; }
+  .link-card:hover, .link-card:focus-within { border-color:color-mix(in srgb,var(--emerald-600) 45%,var(--border)); box-shadow:var(--shadow-hover); transform:translateY(-2px); }
+  .link-card:has(a) { cursor:pointer; }
   .link-card h3 { margin:0 0 .5rem; font-size:1.02rem; line-height:1.35; }
   .link-card p { margin:0; color:var(--text-muted); font-size:.88rem; line-height:1.55; }
   .link-card a { color:var(--text-primary); text-decoration:none; }
-  .link-card a:hover { color:var(--emerald-700); text-decoration:underline; text-underline-offset:.2em; }
+  .link-card a::before { content:""; position:absolute; inset:0; z-index:1; border-radius:inherit; }
+  .link-card a:focus-visible { outline:none; }
+  .link-card a:focus-visible::before { outline:2px solid var(--emerald-500); outline-offset:3px; }
+  .link-card a:hover { color:var(--emerald-700); text-decoration:none; }
   .site-footer { margin-top:1rem; padding:3rem 0 1.2rem; border-top:1px solid var(--border); background:var(--surface-alt); }
   .footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:3rem; }
   .footer-about p { max-width:25rem; margin:.8rem 0; color:var(--text-secondary); font-size:.88rem; line-height:1.55; }
@@ -468,7 +474,7 @@
   <a class="brand" href="/" aria-label="TJMCalc — Accueil">TJM<span>Calc</span></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
   <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
-    <a class="nav-calculator" href="/#form-card">Calculateur</a><a href="/tjm/">Métiers</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/revenus/">TJM en net</a><a href="/barometre/">Baromètre</a>
+    <a class="nav-calculator" href="/#form-card">Calculateur</a><a href="/tjm/">Métiers</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/barometre/">Baromètre</a>
   </nav>
   <button class="theme-toggle" type="button" aria-label="Changer de thème" title="Changer de thème">◐</button>
 </div></header>
@@ -678,7 +684,7 @@
           </div>
 
           <div class="hero-result">
-            <p class="lbl">Net<span class="hero-result-badge">estimé</span></p>
+            <p class="lbl">Net <span class="hero-result-badge">estimé</span></p>
             <p class="val" id="hero-net-fiscal">0 €</p>
           </div>
           <p class="hero-result-note">Net = TJM × jours − frais − charges sociales − impôt sur le revenu (détail juste au-dessus). Basé sur vos <a href="#fiscal-options-accordion">options fiscales</a> (parts, situation, autres revenus) et le barème 2026. Détail complet dans <a href="#fiscal-card">Impôt, TVA et charges</a> ci-dessous.</p>
@@ -782,18 +788,28 @@
   </section>
 
   <section class="home-editorial container" aria-labelledby="explorer-tjm">
-    <h2 id="explorer-tjm">Approfondir votre calcul de TJM</h2>
-    <p class="subtitle">Le calculateur donne un résultat immédiat. Les ressources ci-dessous expliquent comment fixer le tarif, comparer les statuts et interpréter le revenu sans confondre chiffre d’affaires et salaire.</p>
+    <h2 id="explorer-tjm">Comprendre votre TJM avant de décider</h2>
+    <p class="subtitle">TJMCalc s’adresse aux freelances, consultants, artisans et professions indépendantes qui veulent convertir un tarif journalier en revenu estimé. L’outil se distingue par des hypothèses visibles, des sources officielles et des avertissements sur ce que le calcul ne couvre pas.</p>
     <div class="card-grid">
-      <article class="link-card"><h3><a href="/tjm/">TJM par métier</a></h3><p>Fourchettes, frais et leviers propres à chaque activité du calculateur.</p></article>
-      <article class="link-card"><h3><a href="/revenus/">TJM en salaire net</a></h3><p>Simulations de 150 € à 1 500 € avec 15, 18 et 20 jours.</p></article>
-      <article class="link-card"><h3><a href="/statuts/">Comparer les statuts</a></h3><p>Micro, EI, EURL, SASU et portage expliqués sans conseil personnalisé.</p></article>
-      <article class="link-card"><h3><a href="/guides/comment-calculer-son-tjm/">Calculer son TJM</a></h3><p>Une méthode annuelle qui intègre congés, frais et temps non facturé.</p></article>
-      <article class="link-card"><h3><a href="/outils/">Outils freelance</a></h3><p>Convertisseurs de salaire, taux horaire, jours et rentabilité.</p></article>
-      <article class="link-card"><h3><a href="/barometre/">Fourchettes indicatives</a></h3><p>Des repères éditoriaux clairement séparés des statistiques mesurées.</p></article>
+      <article class="link-card"><h3>Présentation</h3><p>Le simulateur calcule un chiffre d’affaires, des cotisations estimées, des frais et un net avant ou après impôt selon vos paramètres. Les résultats restent des estimations, car vos frais réels, votre foyer fiscal, votre protection et vos obligations peuvent modifier le montant final.</p></article>
+      <article class="link-card"><h3>Méthodologie</h3><p>Les données prises en compte sont le TJM, les jours facturés, l’activité, le statut, les frais, l’ACRE, la TVA et le barème d’impôt. Le modèle ne couvre pas toutes les cotisations minimales, aides, conventions, dividendes, crédits d’impôt ou cas internationaux. Les paramètres sont revus au minimum chaque année.</p></article>
+      <article class="link-card"><h3>Différences clés</h3><p>Le chiffre d’affaires est le montant facturé. Le revenu brut est le montant restant avant fiscalité personnelle dans les scénarios simples. Le revenu net disponible dépend ensuite des cotisations, frais, impôt et réserves à prévoir.</p></article>
     </div>
-  </section>
-  <section class="faq">
+    <div class="card-grid">
+      <article class="link-card"><h3>Exemple à 450 €</h3><p>À 450 € sur 18 jours, le chiffre d’affaires mensuel est 8 100 €. En micro-BNC sans ACRE, les cotisations estimées sont 2 074 €. Avec 500 € de frais mensuels, le disponible avant impôt est 5 526 € ; sans ces frais, il serait 6 026 €.</p></article>
+      <article class="link-card"><h3>Limites de l’exemple</h3><p>Il suppose 18 jours vendus sur le mois, aucune sortie de franchise TVA, aucun retard de paiement et un statut micro-BNC. Il ne remplace pas une validation Urssaf, fiscale ou comptable.</p></article>
+      <article class="link-card"><h3>Sources principales</h3><p>Les contrôles s’appuient sur l’Urssaf, Mon-entreprise, Service-Public.fr, le BOFiP, impots.gouv.fr et l’Insee. Le détail est maintenu dans le <a href="/sources/">répertoire des sources</a>.</p></article>
+    </div>
+    <h2>Guides recommandés</h2>
+    <div class="card-grid">
+      <article class="link-card"><h3><a href="/tjm-en-salaire-net/">TJM en salaire net</a></h3><p>La page centrale pour comparer plusieurs TJM, jours facturés, statuts, sources et limites.</p></article>
+      <article class="link-card"><h3><a href="/guides/comment-calculer-son-tjm/">Calculer son TJM</a></h3><p>Une méthode annuelle qui part du revenu cible, des frais et des jours vendables.</p></article>
+      <article class="link-card"><h3><a href="/guides/nombre-de-jours-facturables/">Jours facturables</a></h3><p>Transformer le calendrier en capacité réaliste avant de fixer un tarif.</p></article>
+      <article class="link-card"><h3><a href="/guides/frais-professionnels-dans-le-tjm/">Frais professionnels</a></h3><p>Identifier les dépenses à financer par le TJM sans confondre frais et revenu.</p></article>
+      <article class="link-card"><h3><a href="/statuts/quel-statut-pour-freelance/">Choisir un statut</a></h3><p>Comparer micro, EI, EURL, SASU et portage avec des limites explicites.</p></article>
+      <article class="link-card"><h3><a href="/methodologie/">Méthodologie</a></h3><p>Lire les formules, hypothèses, sources et limites utilisées par le calculateur.</p></article>
+    </div>
+  </section><section class="faq">
     <div class="container">
       <h2>Questions fréquentes</h2>
       <div class="faq-list" id="faq-list"></div>
@@ -801,7 +817,7 @@
   </section>
 
 </main>
-<footer class="site-footer"><div class="container footer-grid"><div class="footer-about"><a class="brand" href="/">TJM<span>Calc</span></a><p>Des estimations pédagogiques pour mieux piloter une activité indépendante.</p><p class="footer-disclaimer">Les calculs sont indicatifs et ne remplacent pas un conseil comptable, fiscal ou juridique.</p></div><nav aria-label="Ressources"><p>Ressources</p><a href="/tjm/">TJM par métier</a><a href="/revenus/">TJM en net</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/barometre/">Baromètre</a></nav><nav aria-label="Informations"><p>À propos</p><a href="/methodologie/">Méthodologie</a><a href="/sources/">Sources</a><a href="/a-propos/">À propos</a><a href="/contact/">Contact</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-de-confidentialite/">Confidentialité</a></nav></div><div class="container footer-bottom"><span>© 2026 TJMCalc</span><a href="/">Ouvrir le calculateur</a></div></footer>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-about"><a class="brand" href="/">TJM<span>Calc</span></a><p>Des estimations pédagogiques pour mieux piloter une activité indépendante.</p><p class="footer-disclaimer">Les calculs sont indicatifs et ne remplacent pas un conseil comptable, fiscal ou juridique.</p></div><nav aria-label="Ressources"><p>Ressources</p><a href="/tjm/">TJM par métier</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/barometre/">Baromètre</a></nav><nav aria-label="Informations"><p>À propos</p><a href="/methodologie/">Méthodologie</a><a href="/sources/">Sources</a><a href="/a-propos/">À propos</a><a href="/contact/">Contact</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-editoriale/">Politique éditoriale</a><a href="/politique-de-confidentialite/">Confidentialité</a></nav></div><div class="container footer-bottom"><span>© 2026 TJMCalc</span><a href="/">Ouvrir le calculateur</a></div></footer>
 
 <script>
 (function () {
