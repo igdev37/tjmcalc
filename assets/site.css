@@ -1,3 +1,10 @@
+/* Résultats du budget : montants lisibles sans défilement horizontal sur mobile. */
+.budget-breakdown{margin:1rem 0;padding:0;border:1px solid var(--border);border-radius:.75rem;overflow:hidden;background:var(--surface)}
+.budget-breakdown>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.7rem;padding:.8rem 1rem;align-items:center}
+.budget-breakdown>div+div{border-top:1px solid var(--border)}
+.budget-breakdown dt{color:var(--text-secondary);font-size:.84rem;line-height:1.5}
+.budget-breakdown dd{margin:0;color:var(--text-strong);font:650 .95rem var(--font-mono)}
+@media(max-width:520px){.budget-breakdown>div{grid-template-columns:1fr;gap:.25rem}.budget-breakdown dd{text-align:left}}
 :root{
   color-scheme:light dark;
   --page-bg:#fff;--surface:#fff;--surface-alt:#f8fafc;--surface-raised:#fff;--surface-hover:#f1f5f9;

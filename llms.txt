@@ -9,8 +9,10 @@ Les calculs sont pédagogiques. Ils distinguent le chiffre d'affaires, les frais
 - [Calculateur TJM en revenu net](https://tjmcalc.com/): Simuler un revenu mensuel et annuel à partir du TJM, du nombre de jours, de l'activité et du statut.
 - [Outils pour freelances](https://tjmcalc.com/outils/): Convertisseurs de taux horaire, salaire CDI, revenu cible, jours facturables et seuil de rentabilité.
 - [Widget calculateur TJM](https://tjmcalc.com/integrer-calculateur-tjm/): Code responsive pour intégrer gratuitement le simulateur sur un site avec attribution.
-- [TJM par métier](https://tjmcalc.com/tjm/): Repères et hypothèses pour plus de 60 activités indépendantes.
-- [TJM en salaire net](https://tjmcalc.com/revenus/): Simulations par niveau de TJM, de 150 à 1 500 euros.
+- [TJM par métier](https://tjmcalc.com/tjm/): Contextes de mission et hypothèses de budget pour plus de 60 activités ; les montants éditoriaux ne sont pas des prix observés.
+- [TJM en salaire net](https://tjmcalc.com/tjm-en-salaire-net/): Calculateur, tableau de scénarios, méthode et limites.
+
+- [Budget annuel freelance](https://tjmcalc.com/outils/budget-annuel-freelance/): Capacité annuelle, revenu cible, frais, réserve et export CSV local.
 
 ## Comprendre et vérifier
 
@@ -18,7 +20,7 @@ Les calculs sont pédagogiques. Ils distinguent le chiffre d'affaires, les frais
 - [Sources officielles](https://tjmcalc.com/sources/): Références Urssaf, Service Public et DGFiP utilisées pour documenter les règles.
 - [Guides sur le TJM](https://tjmcalc.com/guides/): Méthodes pour calculer, négocier et présenter un TJM.
 - [Comparer les statuts](https://tjmcalc.com/statuts/): Micro-entreprise, EI, EURL, SASU, SAS et portage salarial.
-- [Baromètre TJM](https://tjmcalc.com/barometre/): Fourchettes éditoriales indicatives, distinctes de statistiques officielles.
+- [Comparer des tarifs](https://tjmcalc.com/barometre/): Grille de devis comparables et critères de qualité des sources ; aucun panel représentatif revendiqué.
 
 ## À propos
 

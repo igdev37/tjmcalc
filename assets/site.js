@@ -1,12 +1,13 @@
 (() => {
   const root = document.documentElement;
-  const stored = localStorage.getItem('tjmcalc-theme');
+  let stored;
+  try { stored = localStorage.getItem('tjmcalc-theme'); } catch {}
   if (stored === 'light' || stored === 'dark') root.dataset.theme = stored;
   const themeButton = document.querySelector('.theme-toggle');
   themeButton?.addEventListener('click', () => {
     const darkNow = root.dataset.theme === 'dark' || (!root.dataset.theme && matchMedia('(prefers-color-scheme:dark)').matches);
     root.dataset.theme = darkNow ? 'light' : 'dark';
-    localStorage.setItem('tjmcalc-theme', root.dataset.theme);
+    try { localStorage.setItem('tjmcalc-theme', root.dataset.theme); } catch {}
   });
   const navButton = document.querySelector('.nav-toggle');
   const nav = document.querySelector('#primary-nav');

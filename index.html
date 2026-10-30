@@ -38,7 +38,7 @@
     { "@type": "Question", "name": "Ce simulateur est-il fiable à 100% ?", "acceptedAnswer": { "@type": "Answer", "text": "Ce simulateur donne une estimation pédagogique basée sur des taux de charges moyens par statut et par activité. Votre situation réelle peut faire varier le résultat. Pour un calcul exact, consultez un expert-comptable." } },
     { "@type": "Question", "name": "Comment calculer son salaire net en freelance ?", "acceptedAnswer": { "@type": "Answer", "text": "Le calcul tient en trois étapes : le revenu brut mensuel (TJM multiplié par le nombre de jours facturés), puis les charges sociales et fiscales liées au statut et à l'activité (entre 12% et 55% selon les cas), ce qui donne le revenu net réellement perçu." } },
     { "@type": "Question", "name": "TJM vs salaire net : convertir son taux journalier", "acceptedAnswer": { "@type": "Answer", "text": "Une erreur fréquente consiste à multiplier son TJM par 20 jours et par 12 mois. En réalité, un indépendant facture rarement plus de 15 à 19 jours par mois, le reste étant consacré à la prospection, à l'administratif, à la formation et aux congés non rémunérés." } },
-    { "@type": "Question", "name": "Micro-entreprise, société ou portage salarial : quel statut choisir ?", "acceptedAnswer": { "@type": "Answer", "text": "La micro-entreprise offre une gestion simplifiée avec des charges de 12,3% à 25,6% selon l'activité. Les sociétés (EURL, SARL, SASU, SAS...) permettent plus d'optimisation avec environ 42% de charges en gérance TNS contre environ 55% en présidence assimilée salarié. Le portage salarial offre le statut de salarié avec des frais de gestion de 50% à 55%." } },
+    { "@type": "Question", "name": "Micro-entreprise, société ou portage salarial : quel statut choisir ?", "acceptedAnswer": { "@type": "Answer", "text": "La micro-entreprise offre une gestion simplifiée avec des charges de 12,3% à 25,6% selon l'activité. Les sociétés (EURL, SARL, SASU, SAS...) permettent plus d'optimisation avec environ 42% de charges en gérance TNS contre environ 55% en présidence assimilée salarié. Le portage salarial offre le statut de salarié avec une retenue globale estimative incluant cotisations et frais de gestion." } },
     { "@type": "Question", "name": "Faut-il payer la CFE (Cotisation Foncière des Entreprises) ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans la quasi-totalité des cas : la CFE est due par tous les indépendants et sociétés dès la deuxième année d'activité, y compris en micro-entreprise. Son montant forfaitaire dépend de la commune et du chiffre d'affaires, généralement entre 100 € et 800 € par an." } }
   ]
 }
@@ -442,6 +442,7 @@
     .alert-plafond { border:1px solid var(--amber-600); background:#fff; }
   }
 </style>
+<meta name="google-adsense-account" content="ca-pub-3632395527232725">
 </head>
 <body>
 
@@ -474,7 +475,7 @@
   <a class="brand" href="/" aria-label="TJMCalc — Accueil">TJM<span>Calc</span></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
   <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
-    <a class="nav-calculator" href="/#form-card">Calculateur</a><a href="/tjm/">Métiers</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/barometre/">Baromètre</a>
+    <a class="nav-calculator" href="/#form-card">Calculateur</a><a href="/tjm/">Métiers</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/barometre/">Comparer les tarifs</a>
   </nav>
   <button class="theme-toggle" type="button" aria-label="Changer de thème" title="Changer de thème">◐</button>
 </div></header>
@@ -483,7 +484,7 @@
   <section class="hero container">
     <p class="eyebrow">Simulateur gratuit</p>
     <h1>Simulateur de revenu freelance &amp; indépendant</h1>
-    <p class="subtitle">Convertissez votre TJM en revenu net en 10 secondes, quel que soit votre activité et votre statut juridique : micro-entreprise, société ou portage salarial.</p>
+    <p class="subtitle">Estimez le passage de votre TJM à un revenu disponible selon votre activité, vos frais et votre statut : micro-entreprise, société ou portage salarial.</p>
   </section>
 
   <section class="container">
@@ -536,7 +537,7 @@
             <p class="lbl">TJM nécessaire</p>
             <p class="val" id="tjm-requis-value">—</p>
           </div>
-          <p class="field-hint">TJM arrondi au centime supérieur pour garantir l'atteinte de votre objectif (les montants ci-dessous restent affichés à l'euro près).</p>
+          <p class="field-hint">TJM arrondi au centime supérieur pour atteindre votre objectif dans les hypothèses du modèle (les montants ci-dessous restent affichés à l'euro près).</p>
         </div>
 
         <div class="field">
@@ -566,10 +567,10 @@
         <div class="field">
           <label class="checkbox-row" for="acre-check">
             <input type="checkbox" id="acre-check">
-            <span>J’estime être éligible à l’ACRE en micro-entreprise</span>
+            <span>ACRE micro : création à compter du 1er juillet 2026, période de droit en cours</span>
             <details class="tooltip">
               <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
-              <div class="tooltip-content">Cette option applique uniquement l’abattement simplifié prévu par le simulateur pour la micro-entreprise. Les règles ACRE hors micro dépendent de la situation et ne sont pas modélisées ici. Vérifiez toujours votre éligibilité auprès de l’Urssaf.</div>
+              <div class="tooltip-content">Cette option applique une réduction de 25 % des cotisations micro-sociales. Elle suppose une création à compter du 1er juillet 2026 et une période de droit en cours ; les créations antérieures ne sont pas modélisées. Les règles ACRE hors micro dépendent de la situation et ne sont pas modélisées ici. Vérifiez toujours votre éligibilité auprès de l’Urssaf.</div>
             </details>
           </label>
         </div>
@@ -622,7 +623,7 @@
                 <span>J'ai opté pour le versement libératoire de l'impôt sur le revenu</span>
                 <details class="tooltip">
                   <summary aria-label="Plus d'informations"><svg class="icon"><use href="#i-info"></use></svg></summary>
-                  <div class="tooltip-content">Option réservée aux micro-entrepreneurs dont le revenu fiscal de référence du foyer (année N-2) ne dépasse pas environ 27 478 € par part. Elle remplace l'abattement forfaitaire et le barème progressif par un taux fixe payé chaque mois à l'Urssaf, en même temps que vos cotisations.</div>
+                  <div class="tooltip-content">Option réservée aux micro-entrepreneurs dont le revenu fiscal de référence du foyer (année N-2) ne dépasse pas 29 315 € par part pour une option en 2026 (RFR 2024), sous les autres conditions applicables. Elle remplace l'abattement forfaitaire et le barème progressif par un taux fixe payé chaque mois à l'Urssaf, en même temps que vos cotisations.</div>
                 </details>
               </label>
             </div>
@@ -737,10 +738,10 @@
     </div>
 
     <div class="card fiscal-card" id="fiscal-card">
-      <h2>Impôt, TVA et charges : votre net fiscal réel</h2>
-      <p class="field-hint">Calcul gratuit et détaillé : abattement micro-entreprise ou versement libératoire, barème progressif de l'impôt sur le revenu 2026, TVA et répartition de vos cotisations sociales. Réglez vos parts fiscales, situation et autres revenus dans <a href="#fiscal-options-accordion">Options fiscales</a>, en haut de la page.</p>
+      <h2>Impôt, TVA et charges : votre disponible estimé</h2><p class="field-hint">Cotisations et paramètres fiscaux contrôlés le 30 octobre 2026. Le barème 2026 sur les revenus 2025 sert de référence ; la fiscalité définitive des revenus 2026 peut différer. CFP, CFE et taxes annexes exclues : prévoyez-les dans vos frais.</p>
+      <p class="field-hint">Calcul gratuit et détaillé : abattement micro-entreprise ou versement libératoire, barème progressif de l'impôt sur le revenu 2026, TVA et hypothèses de cotisations sociales. Réglez vos parts fiscales, situation et autres revenus dans <a href="#fiscal-options-accordion">Options fiscales</a>, en haut de la page.</p>
 
-      <h3 class="fiscal-section-title">Détail de vos charges sociales</h3>
+      <h3 class="fiscal-section-title">Cotisations et retenues estimées</h3>
       <div class="fiscal-breakdown-list" id="fiscal-charges-list"></div>
 
       <h3 class="fiscal-section-title">Impôt sur le revenu (barème 2026)</h3>
@@ -767,7 +768,7 @@
       </div>
 
       <div class="fiscal-net-hero">
-        <p class="lbl">Net fiscal réel mensuel (après charges ET impôt sur le revenu)</p>
+        <p class="lbl">Disponible mensuel estimé après cotisations et impôt</p>
         <p class="val" id="fiscal-net-monthly">0 €</p>
         <p class="fiscal-note fiscal-note-annual" id="fiscal-net-annual-note">0 € / an</p>
       </div>
@@ -802,6 +803,7 @@
     </div>
     <h2>Guides recommandés</h2>
     <div class="card-grid">
+      <article class="link-card"><h3><a href="/outils/budget-annuel-freelance/">Financer une année complète</a></h3><p>Calculez un TJM à partir de votre revenu, de vos frais, de vos jours vendables et d’une réserve. Comparez trois capacités et exportez le budget en CSV.</p></article>
       <article class="link-card"><h3><a href="/tjm-en-salaire-net/">TJM en salaire net</a></h3><p>La page centrale pour comparer plusieurs TJM, jours facturés, statuts, sources et limites.</p></article>
       <article class="link-card"><h3><a href="/guides/comment-calculer-son-tjm/">Calculer son TJM</a></h3><p>Une méthode annuelle qui part du revenu cible, des frais et des jours vendables.</p></article>
       <article class="link-card"><h3><a href="/guides/nombre-de-jours-facturables/">Jours facturables</a></h3><p>Transformer le calendrier en capacité réaliste avant de fixer un tarif.</p></article>
@@ -817,7 +819,7 @@
   </section>
 
 </main>
-<footer class="site-footer"><div class="container footer-grid"><div class="footer-about"><a class="brand" href="/">TJM<span>Calc</span></a><p>Des estimations pédagogiques pour mieux piloter une activité indépendante.</p><p class="footer-disclaimer">Les calculs sont indicatifs et ne remplacent pas un conseil comptable, fiscal ou juridique.</p></div><nav aria-label="Ressources"><p>Ressources</p><a href="/tjm/">TJM par métier</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/barometre/">Baromètre</a></nav><nav aria-label="Informations"><p>À propos</p><a href="/methodologie/">Méthodologie</a><a href="/sources/">Sources</a><a href="/a-propos/">À propos</a><a href="/contact/">Contact</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-editoriale/">Politique éditoriale</a><a href="/politique-de-confidentialite/">Confidentialité</a></nav></div><div class="container footer-bottom"><span>© 2026 TJMCalc</span><a href="/">Ouvrir le calculateur</a></div></footer>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-about"><a class="brand" href="/">TJM<span>Calc</span></a><p>Des estimations pédagogiques pour mieux piloter une activité indépendante.</p><p class="footer-disclaimer">Les calculs sont indicatifs et ne remplacent pas un conseil comptable, fiscal ou juridique.</p></div><nav aria-label="Ressources"><p>Ressources</p><a href="/tjm/">TJM par métier</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/barometre/">Comparer les tarifs</a></nav><nav aria-label="Informations"><p>À propos</p><a href="/methodologie/">Méthodologie</a><a href="/sources/">Sources</a><a href="/a-propos/">À propos</a><a href="/contact/">Contact</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-editoriale/">Politique éditoriale</a><a href="/politique-de-confidentialite/">Confidentialité</a></nav></div><div class="container footer-bottom"><span>© 2026 TJMCalc</span><a href="/">Ouvrir le calculateur</a></div></footer>
 
 <script>
 (function () {
@@ -942,7 +944,7 @@
     { q: 'Ce simulateur est-il fiable à 100% ?', a: "Ce simulateur donne une estimation pédagogique basée sur des taux de charges moyens par statut et par activité. Votre situation réelle (chiffre d'affaires, région, ancienneté, régime fiscal précis) peut faire varier le résultat. Pour un calcul exact, consultez un expert-comptable." },
     { q: 'Comment calculer son salaire net en freelance ?', a: "Le calcul tient en trois étapes. D'abord, votre revenu brut mensuel : votre TJM multiplié par le nombre de jours facturés dans le mois. Ensuite, on retire les charges sociales et fiscales liées à votre statut et à votre activité, entre 12% et 55% selon les cas. Ce qui reste est votre revenu net, celui que vous touchez réellement. Le simulateur ci-dessus applique automatiquement cette logique pour les freelances, indépendants et professions libérales : modifiez votre TJM ou vos jours travaillés et le résultat se met à jour instantanément, sans bouton à cliquer." },
     { q: 'TJM vs salaire net : convertir son taux journalier', a: "Une erreur fréquente consiste à multiplier son TJM par 20 jours et par 12 mois pour estimer son revenu annuel. En réalité, un indépendant facture rarement plus de 15 à 19 jours par mois : le reste du temps est consacré à la prospection, à l'administratif, à la formation et aux congés non rémunérés. C'est pourquoi le nombre de jours travaillés par mois est un paramètre clé du simulateur, à ajuster selon votre activité réelle plutôt que votre disponibilité théorique." },
-    { q: 'Micro-entreprise, société ou portage salarial : quel statut choisir ?', a: "La micro-entreprise offre une gestion simplifiée : le taux de charges (12,3% à 25,6%) dépend directement de votre activité — vente, prestation de service ou profession libérale — et le simulateur le détecte automatiquement. Les sociétés (EI, EURL, SARL, SASU, SAS, SA...) permettent davantage d'optimisation mais impliquent une comptabilité plus lourde : comptez environ 42% en gérance TNS (EURL, SARL, EI) contre environ 55% en présidence assimilée salarié (SASU, SAS, SA). Le portage salarial conserve le statut de salarié avec une couverture sociale complète, contre des frais de gestion plus élevés (50% à 55%). Chaque statut répond à une priorité différente : simplicité, optimisation fiscale ou sécurité sociale. Un expert-comptable peut vous aider à trancher selon votre situation précise et votre activité." },
+    { q: 'Micro-entreprise, société ou portage salarial : quel statut choisir ?', a: "La micro-entreprise offre une gestion simplifiée : le taux de charges (12,3% à 25,6%) dépend directement de votre activité — vente, prestation de service ou profession libérale — et le simulateur le détecte automatiquement. Les sociétés (EI, EURL, SARL, SASU, SAS, SA...) permettent davantage d'optimisation mais impliquent une comptabilité plus lourde : comptez environ 42% en gérance TNS (EURL, SARL, EI) contre environ 55% en présidence assimilée salarié (SASU, SAS, SA). Le portage salarial conserve le statut de salarié avec une couverture sociale complète, avec des cotisations salariales et patronales et des frais de gestion distincts. Chaque statut répond à une priorité différente : simplicité, optimisation fiscale ou sécurité sociale. Un expert-comptable peut vous aider à trancher selon votre situation précise et votre activité." },
     { q: 'Faut-il payer la CFE (Cotisation Foncière des Entreprises) ?', a: "Oui, dans la quasi-totalité des cas : la CFE est due par tous les indépendants et sociétés dès la deuxième année d'activité (une exonération s'applique la 1ʳᵉ année civile), y compris en micro-entreprise. Son montant forfaitaire dépend de votre commune et de votre chiffre d'affaires, généralement entre 100 € et 800 € par an ; une exonération existe pour les tout petits chiffres d'affaires selon la commune. Ce montant annuel n'est pas inclus dans le calcul mensuel ci-dessus : pensez à le provisionner à part, en général autour de 25 à 65 €/mois lissés sur l'année." }
   ];
 
@@ -977,7 +979,7 @@
       taux: taux,
       microType: microType,
       resolvedShort: base.shortLabel + ' · ' + rateLabel.short,
-      desc: base.desc + ' Activité détectée : ' + rateLabel.full + ' (' + Math.round(tauxBase * 100) + '%' + (acreOn ? ', réduit à ' + Math.round(taux * 100) + '% avec l\u2019ACRE' : '') + ').'
+      desc: base.desc + ' Activité détectée : ' + rateLabel.full + ' (' + (tauxBase * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + '%' + (acreOn ? ', réduit à ' + (taux * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + '% avec l\u2019ACRE' : '') + ').'
     };
   }
 
@@ -989,7 +991,7 @@
     var brut = safeTjm * safeJours;
     // Les frais micro réduisent le revenu disponible, mais pas l'assiette des
     // cotisations. Au réel, ils sont retirés avant le taux moyen simplifié.
-    var safeFrais = base.id !== 'portage' ? Math.max(0, Math.min(Number(fraisPro) || 0, brut)) : 0;
+    var safeFrais = base.id !== 'portage' ? Math.max(0, Number(fraisPro) || 0) : 0;
     var assiette = base.isMicro ? brut : Math.max(0, brut - safeFrais);
     var charges = assiette * statut.taux;
     var net = brut - safeFrais - charges;
@@ -1029,61 +1031,15 @@
   var MICRO_ABATTEMENT_RATE = { vente: 0.71, service: 0.50, liberale: 0.34, cipav: 0.34 };
   var MICRO_ABATTEMENT_MIN_ANNUEL = 305;
   // Versement libératoire de l'impôt sur le revenu : taux fixe sur le CA, réservé aux
-  // foyers dont le revenu fiscal de référence (N-2) ne dépasse pas ~27 478€ par part.
+  // foyers dont le revenu fiscal de référence (N-2) ne dépasse pas ~29 315€ par part.
   var VFL_RATE = { vente: 0.01, service: 0.017, liberale: 0.022, cipav: 0.022 };
-  var VFL_SEUIL_RFR_PAR_PART_INDICATIF = 27478;
+  var VFL_SEUIL_RFR_PAR_PART_INDICATIF = 29315;
   // Abattement forfaitaire pour frais professionnels des revenus imposés selon les
   // règles applicables aux salariés (dirigeant assimilé salarié, porté salarial).
   var SALARIE_ABATTEMENT_FRAIS = 0.10;
   // Taux de TVA standard retenu à titre indicatif (des taux réduits de 5,5% à 10%
   // existent pour certaines activités).
   var TVA_TAUX_STANDARD = 0.20;
-
-  // Répartition indicative des cotisations sociales par grande famille de statut.
-  // Micro-entreprise : structure officielle publiée par l'Urssaf (réforme du 1er
-  // janvier 2026) pour 100€ de cotisation, appliquée proportionnellement à votre
-  // taux réel. Les autres statuts reposent sur des cotisations à taux progressifs
-  // (PASS, tranches de revenu) : la ventilation indiquée est une moyenne pédagogique
-  // cohérente avec les taux publiés par l'Urssaf et les caisses de retraite 2026.
-  var CHARGES_BREAKDOWN = {
-    micro: [
-      { label: 'Retraite de base', frac: 0.4345 },
-      { label: 'Retraite complémentaire', frac: 0.1975 },
-      { label: 'CSG-CRDS', frac: 0.2360 },
-      { label: 'Assurance maladie-maternité', frac: 0.1005 },
-      { label: 'Invalidité-décès', frac: 0.0315 }
-    ],
-    tns: [
-      { label: 'Retraite de base', frac: 0.40 },
-      { label: 'Retraite complémentaire', frac: 0.16 },
-      { label: 'CSG-CRDS', frac: 0.22 },
-      { label: 'Assurance maladie-maternité', frac: 0.16 },
-      { label: 'Allocations familiales', frac: 0.03 },
-      { label: 'Invalidité-décès', frac: 0.03 }
-    ],
-    assimile: [
-      { label: 'Retraite (base + complémentaire Agirc-Arrco)', frac: 0.45 },
-      { label: 'Assurance maladie', frac: 0.12 },
-      { label: 'CSG-CRDS', frac: 0.20 },
-      { label: 'Allocations familiales', frac: 0.05 },
-      { label: 'Autres (formation, AT/MP, contributions diverses)', frac: 0.18 }
-    ],
-    portage: [
-      { label: 'Frais de gestion (société de portage)', frac: 0.15 },
-      { label: 'Retraite (base + complémentaire)', frac: 0.3825 },
-      { label: 'CSG-CRDS', frac: 0.17 },
-      { label: 'Assurance maladie', frac: 0.102 },
-      { label: 'Autres cotisations salariales', frac: 0.153 },
-      { label: 'Allocations familiales', frac: 0.0425 }
-    ]
-  };
-
-  function getChargesFamily(statutId) {
-    if (statutId === 'micro') return 'micro';
-    if (statutId === 'portage') return 'portage';
-    if (statutId === 'sasu' || statutId === 'sas' || statutId === 'sa') return 'assimile';
-    return 'tns'; // ei, eurl, sarl, snc, scs, sca
-  }
 
   function computeIRBrutParPart(revenuParPart) {
     var rev = Math.max(0, revenuParPart || 0);
@@ -1435,7 +1391,7 @@
     lineBrutValue.textContent = formatEuros(r.brut);
     lineFraisRow.style.display = r.frais > 0 ? 'flex' : 'none';
     lineFraisValue.textContent = '− ' + formatEuros(r.frais);
-    lineChargesLabel.textContent = '− Charges (' + r.statut.resolvedShort + ', ' + r.chargesPct + '%)';
+    lineChargesLabel.textContent = '− Charges (' + r.statut.resolvedShort + ', ' + (r.statut.taux * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + '%)';
     lineChargesValue.textContent = '− ' + formatEuros(r.charges);
     chargesTooltipText.textContent = r.statut.desc;
 
@@ -1450,6 +1406,8 @@
 
     var impotPct = r.brut > 0 ? Math.round((fd.impotMensuel / r.brut) * 100) : 0;
     var netApresImpotPct = Math.max(0, 100 - r.chargesPct - r.fraisPct - impotPct);
+    barNet.parentElement.hidden = r.brut <= 0 || fd.netReelMensuel < 0;
+    barNet.parentElement.style.display = barNet.parentElement.hidden ? 'none' : 'flex';
     barNet.style.width = netApresImpotPct + '%';
     barCharges.style.width = r.chargesPct + '%';
     barImpot.style.width = impotPct + '%';
@@ -1463,7 +1421,7 @@
     statBrutAnnuel.textContent = formatEuros(r.brutAnnuel);
 
     if (base && base.isMicro) {
-      statutHint.textContent = 'Taux détecté pour cette activité : ' + r.statut.resolvedShort.split(' · ')[1] + ' (' + Math.round(r.statut.taux * 100) + '%).';
+      statutHint.textContent = 'Taux détecté pour cette activité : ' + r.statut.resolvedShort.split(' · ')[1] + ' (' + (r.statut.taux * 100).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + '%).';
     } else {
       statutHint.textContent = 'Taux moyen indicatif : ' + Math.round((base ? base.taux : 0) * 100) + '%.';
     }
@@ -1577,43 +1535,24 @@
   }
 
   function renderFiscalDetail(base, r, activiteId, fd) {
-    // Détail des cotisations sociales.
-    var family = getChargesFamily(base ? base.id : 'micro');
-    var rows = CHARGES_BREAKDOWN[family] || CHARGES_BREAKDOWN.tns;
     fiscalChargesList.innerHTML = '';
-    rows.forEach(function (row) {
-      var amount = row.frac * r.charges;
-      var div = document.createElement('div');
-      div.className = 'fiscal-breakdown-row';
-      var lbl = document.createElement('span');
-      lbl.className = 'lbl';
-      lbl.appendChild(document.createTextNode(row.label + ' '));
-      var pct = document.createElement('span');
-      pct.className = 'pct';
-      pct.textContent = '(' + Math.round(row.frac * 100) + '% des charges)';
-      lbl.appendChild(pct);
-      var val = document.createElement('span');
-      val.className = 'val';
-      val.textContent = formatEuros(amount) + ' / mois';
-      div.appendChild(lbl);
-      div.appendChild(val);
-      fiscalChargesList.appendChild(div);
-    });
-    if (family === 'portage') {
-      var note = document.createElement('p');
-      note.className = 'fiscal-note';
-      note.style.margin = '.625rem .875rem 0';
-      note.textContent = 'En portage salarial, une partie de ce taux correspond aux frais de gestion de la société de portage (facturation, accompagnement), et non à des cotisations sociales.';
-      fiscalChargesList.appendChild(note);
-    } else {
-      var note2 = document.createElement('p');
-      note2.className = 'fiscal-note';
-      note2.style.margin = '.625rem .875rem 0';
-      note2.textContent = family === 'micro'
-        ? 'Répartition basée sur la structure officielle des cotisations Urssaf 2026, appliquée à votre taux réel.'
-        : 'Répartition indicative : les cotisations réelles suivent des barèmes progressifs (plafond de la Sécurité sociale, tranches de revenu).';
-      fiscalChargesList.appendChild(note2);
-    }
+    var total = document.createElement('div');
+    total.className = 'fiscal-breakdown-row';
+    var label = document.createElement('span');
+    label.className = 'lbl';
+    label.textContent = base.isMicro ? 'Cotisations micro-sociales sur le chiffre d’affaires' : 'Retenues globales du modèle simplifié';
+    var value = document.createElement('span');
+    value.className = 'val';
+    value.textContent = formatEuros(r.charges) + ' / mois';
+    total.appendChild(label);
+    total.appendChild(value);
+    fiscalChargesList.appendChild(total);
+    var note = document.createElement('p');
+    note.className = 'fiscal-note';
+    note.textContent = base.isMicro
+      ? 'La CFP, la CFE et les taxes éventuelles ne sont pas incluses. La répartition par caisse et les droits acquis ne sont pas calculés.'
+      : 'Le taux moyen ne reconstitue pas un décompte de cotisations. En portage, il inclut aussi une estimation des frais de gestion. Vérifiez votre cas avec le simulateur officiel ou le professionnel qui suit votre activité.';
+    fiscalChargesList.appendChild(note);
 
     // Impôt sur le revenu / versement libératoire.
     if (fd.vflOn) {
@@ -1641,7 +1580,7 @@
       fiscalTvaAlert.style.display = 'none';
     }
 
-    // Net fiscal réel.
+    // Disponible estimé après impôt.
     fiscalNetMonthly.textContent = formatEuros(fd.netReelMensuel);
     fiscalNetAnnualNote.textContent = formatEuros(fd.netReelAnnuel) + ' / an';
   }
@@ -1952,32 +1891,6 @@
   });
 })();
 </script>
-<script>
-/* AdSense est volontairement chargé après le premier engagement utilisateur.
-   Les 250+ Kio de scripts Google ne retardent ainsi ni le H1 (LCP), ni le
-   calculateur ; un délai de secours conserve les annonces pour les lecteurs. */
-(function () {
-  'use strict';
-  if (new URLSearchParams(location.search).get('embed') === '1') return;
-  var loaded = false;
-  var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
-  function loadAds() {
-    if (loaded) return;
-    loaded = true;
-    events.forEach(function (eventName) { window.removeEventListener(eventName, loadAds); });
-    var script = document.createElement('script');
-    script.async = true;
-    script.crossOrigin = 'anonymous';
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3632395527232725';
-    document.head.appendChild(script);
-  }
-  events.forEach(function (eventName) {
-    window.addEventListener(eventName, loadAds, { once: true, passive: true });
-  });
-  window.addEventListener('load', function () {
-    window.setTimeout(loadAds, navigator.connection && navigator.connection.saveData ? 15000 : 8000);
-  }, { once: true });
-})();
-</script>
+
 </body>
 </html>

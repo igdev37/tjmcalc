@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Budget annuel freelance : TJM, frais et réserve | TJMCalc</title>
+  <meta name="description" content="Construisez un budget annuel micro-entrepreneur : jours réellement vendables, revenu cible, frais, réserve, scénarios et export CSV local.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://tjmcalc.com/outils/budget-annuel-freelance/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme:light)">
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme:dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="TJMCalc">
+  <meta property="og:title" content="Quel TJM finance votre année ?">
+  <meta property="og:description" content="Construisez un budget annuel micro-entrepreneur : jours réellement vendables, revenu cible, frais, réserve, scénarios et export CSV local.">
+  <meta property="og:url" content="https://tjmcalc.com/outils/budget-annuel-freelance/">
+  <meta property="og:image" content="https://tjmcalc.com/assets/og-tjmcalc.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TJMCalc, calculateur de revenu freelance">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quel TJM finance votre année ?">
+  <meta name="twitter:description" content="Construisez un budget annuel micro-entrepreneur : jours réellement vendables, revenu cible, frais, réserve, scénarios et export CSV local.">
+  <meta name="twitter:image" content="https://tjmcalc.com/assets/og-tjmcalc.svg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Quel TJM finance votre année ?","description":"Construisez un budget annuel micro-entrepreneur : jours réellement vendables, revenu cible, frais, réserve, scénarios et export CSV local.","url":"https://tjmcalc.com/outils/budget-annuel-freelance/","dateModified":"2026-10-30","isPartOf":{"@type":"WebSite","name":"TJMCalc","url":"https://tjmcalc.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://tjmcalc.com/"},{"@type":"ListItem","position":2,"name":"Quel TJM finance votre année ?","item":"https://tjmcalc.com/outils/budget-annuel-freelance/"}]}]}</script>
+</head>
+<body data-page-type="tool" class="template-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="/" aria-label="TJMCalc - Accueil">TJM<span>Calc</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+      <a class="nav-calculator" href="/#form-card">Calculateur</a><a href="/tjm/">Métiers</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/barometre/">Comparer les tarifs</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Changer de thème" title="Changer de thème">●</button>
+  </div></header>
+  <main id="contenu" class="editorial-main">
+    <div class="hero-band"><div class="container">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane"><ol><li><a href="/">Accueil</a></li><li><span aria-current="page">Quel TJM finance votre année ?</span></li></ol></nav>
+      <header class="page-hero"><p class="eyebrow">Budget micro-entreprise</p><h1>Quel TJM finance votre année ?</h1><p class="lead">Un budget transparent pour financer douze mois de revenu avec une capacité facturable réaliste, et tester ce qui change quand vous vendez moins de jours.</p><div class="hero-meta"><span>Mis à jour le <time datetime="2026-10-30">30 octobre 2026</time></span><span>Dernière vérification le <time datetime="2026-10-30">30 octobre 2026</time></span></div></header>
+    </div></div>
+    <div class="container page-layout">
+      <article class="article-content trust-content">
+    <section class="tool-panel" aria-labelledby="budget-title"><h2 id="budget-title">Financer douze mois avec vos jours réellement vendables</h2>
+      <p>Ce budget est destiné à une activité en micro-entreprise. Le revenu souhaité est un disponible <strong>avant impôt sur le revenu</strong>. Les jours sans facturation sont déjà pris en compte par votre capacité annuelle : ne les retirez pas une deuxième fois.</p>
+      <form data-tool="annualBudget" aria-label="Budget annuel micro-entrepreneur"><div class="tool-grid">
+        <div class="tool-field"><label for="target">Disponible mensuel souhaité avant IR (€)</label><input id="target" type="number" value="3000" min="0" step="100" inputmode="decimal"></div>
+        <div class="tool-field"><label for="expenses">Frais professionnels par mois (€)</label><input id="expenses" type="number" value="500" min="0" step="50" inputmode="decimal"></div>
+        <div class="tool-field"><label for="annual-days">Jours facturés et encaissés sur l’année</label><input id="annual-days" type="number" value="180" min="0" max="366" step="1" inputmode="numeric"></div>
+        <div class="tool-field"><label for="reserve-months">Réserve en plus du revenu annuel (mois de revenu)</label><input id="reserve-months" type="number" value="1" min="0" max="24" step="0.5" inputmode="decimal"></div>
+        <div class="tool-field"><label for="micro-type">Catégorie de cotisations micro-sociales</label><select id="micro-type"><option value="liberale">BNC hors Cipav — 25,6 %</option><option value="service">Services BIC — 21,2 %</option><option value="cipav">BNC relevant de la Cipav — 23,2 %</option><option value="vente">Vente de marchandises — 12,3 %</option></select></div>
+      </div><output id="tool-result" class="tool-result" aria-live="polite"></output>
+      <p><button id="download-budget" class="button" type="button" disabled>Télécharger mon budget en CSV</button></p></form>
+      <noscript><p>Activez JavaScript pour modifier le budget et exporter vos hypothèses. Le cas détaillé ci-dessous reste lisible sans JavaScript.</p></noscript>
+    </section>
+    <section class="content-section editorial-section"><h2>Pourquoi raisonner à l’année ?</h2><p>Un mois de mission complet peut sembler confortable alors que le tarif ne finance ni les congés ni le temps nécessaire pour trouver le prochain client. Pour décider, le besoin personnel porte sur douze mois ; la facturation, elle, porte uniquement sur les jours que vous pensez vendre et encaisser.</p><p>Construisez d’abord votre capacité avec le <a href="/outils/jours-facturables/">calculateur de jours facturables</a>. Retirez séparément vos congés, votre administratif, votre formation et une hypothèse d’intercontrat. Une journée de prospection n’est pas une journée vendue. Si une mission couvre plusieurs mois, comptez uniquement les jours réellement contractualisés, puis testez une hypothèse moins favorable.</p></section>
+    <section class="content-section card" id="cas-detaille"><h2>Cas détaillé : 3 000 € par mois, 500 € de frais, 180 jours</h2><p>Il s’agit d’un exemple fictif de budget en micro-BNC hors Cipav, sans ACRE, sans versement libératoire, pour une année complète au même taux de cotisations. Ce cas ne décrit aucun tarif de marché.</p><ol><li>Le revenu personnel cible est de 3 000 × 12 = <strong>36 000 €</strong> avant IR.</li><li>Les dépenses de l’activité sont de 500 × 12 = <strong>6 000 €</strong>.</li><li>Une réserve supplémentaire d’un mois de revenu représente <strong>3 000 €</strong>. Elle ne remplace pas les congés déjà retirés du calendrier.</li><li>Après 25,6 % de cotisations sur le CA, il faut conserver 45 000 €. Le CA à encaisser est donc 45 000 ÷ 0,744 = <strong>60 483,87 €</strong>.</li><li>Réparti sur 180 jours, ce besoin donne <strong>336,03 € HT par jour</strong>, arrondi au centime supérieur.</li></ol><p>À ce tarif, la facturation représente environ 60 485 € sur l’année. Les cotisations sont d’environ 15 484 €. Les 6 000 € de dépenses et la réserve de 3 000 € sont ensuite retirés : il reste environ 36 000 € avant impôt sur le revenu et prélèvements annexes.</p><p>Avec le même budget mais seulement 150 jours vendus, le besoin passe à 403,23 € HT par jour. Une remise à 300 € ne se finance donc pas simplement en travaillant « un peu plus » : il faudrait environ 202 jours encaissés pour le même budget. Vérifiez si votre calendrier et votre portefeuille clients le permettent.</p></section>
+    <section class="content-section editorial-section"><h2>La formule et le traitement des frais</h2><p><code>CA nécessaire = (revenu annuel + frais annuels + réserve) ÷ (1 − taux micro-social)</code></p><p><code>TJM HT = CA nécessaire ÷ jours annuels encaissés</code></p><p>En micro, les frais ne diminuent pas le chiffre d’affaires soumis aux cotisations. Acheter un ordinateur ou payer un abonnement réduit votre disponible, même si ce coût n’est pas déductible de l’assiette sociale. Le budget conserve également les frais lorsque le chiffre d’affaires est nul ou insuffisant : un mois déficitaire ne devient pas artificiellement un mois à zéro.</p><p>La réserve est de l’argent mis de côté après les cotisations, pas une dépense déductible. Si vous disposez déjà de la trésorerie souhaitée, saisissez zéro pour ne pas la financer de nouveau dans l’année.</p></section>
+    <section class="content-section editorial-section"><h2>Utiliser le CSV pour suivre votre activité</h2><p>L’export contient la date de simulation, les jours retenus, le tarif, le CA, les cotisations estimées, les frais et la réserve. Il se crée dans votre navigateur. Conservez une copie de votre prévision puis comparez-la chaque mois aux encaissements et dépenses réels.</p><p>Si vos jours vendus diminuent, modifiez la capacité plutôt que de supposer que les mois restants seront tous pleins. Si vos dépenses augmentent, mettez à jour leur moyenne annuelle. Ce suivi permet de décider quand ajuster le prochain devis ou renforcer la trésorerie.</p></section>
+    <section class="content-section editorial-section"><h2>Ce budget ne calcule pas</h2><ul><li>l’impôt sur le revenu du foyer et le versement libératoire ;</li><li>la contribution à la formation professionnelle (CFP), la CFE et les taxes éventuellement applicables ; ajoutez une provision adaptée dans les frais ;</li><li>l’ACRE, les activités mixtes, les régimes spécifiques ou l’outre-mer ;</li><li>la date de sortie de franchise de TVA ou du régime micro ;</li><li>les délais de paiement, impayés, stocks et investissements financés à crédit.</li></ul><p>Le TJM obtenu est le seuil de votre scénario avant ces éléments. Le prix vendu dépend aussi de votre prestation, de son périmètre et du client. Une activité rentable peut nécessiter un autre régime ou une autre structure de coûts.</p></section>
+    <section class="trust-panel"><div><h2>Vérifier les règles utilisées</h2><ul class="source-list"><li><a href="/sources/#urssaf-micro-2026">Service Public Entreprendre - Cotisations sociales d’un micro-entrepreneur</a><span>taux micro-sociaux par activité et assiette sur chiffre d’affaires ; la CFP est à financer séparément</span></li><li><a href="/sources/#service-public-micro-fiscal">Direction de l’information légale et administrative - Service-Public.fr - Régime fiscal de la micro-entreprise</a><span>abattements forfaitaires, versement libératoire, seuils et principes du régime micro-fiscal</span></li><li><a href="/sources/#service-public-tva">Direction de l’information légale et administrative - Service-Public.fr - Franchise en base de TVA</a><span>seuils de franchise, seuils majorés, date d’effet possible de la sortie de franchise</span></li></ul></div><div><h2>Poursuivre le calcul</h2><p>Le <a href="/">calculateur principal</a> permet une estimation mensuelle avec paramètres fiscaux. Consultez la <a href="/methodologie/">méthode</a> pour comprendre les écarts entre statuts et <a href="/contact/#signaler-correction">signalez une anomalie</a> avec vos seules hypothèses de calcul.</p></div></section>
+  </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-about"><a class="brand" href="/">TJM<span>Calc</span></a><p>Des estimations pédagogiques pour mieux piloter une activité indépendante.</p><p class="footer-disclaimer">Les calculs sont indicatifs et ne remplacent pas un conseil comptable, fiscal ou juridique.</p></div><nav aria-label="Ressources"><p>Ressources</p><a href="/tjm/">TJM par métier</a><a href="/tjm-en-salaire-net/">TJM en net</a><a href="/guides/">Guides</a><a href="/statuts/">Statuts</a><a href="/outils/">Outils</a><a href="/barometre/">Comparer les tarifs</a></nav><nav aria-label="Informations"><p>À propos</p><a href="/methodologie/">Méthodologie</a><a href="/sources/">Sources</a><a href="/politique-editoriale/">Politique éditoriale</a><a href="/a-propos/">À propos</a><a href="/contact/">Contact</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-de-confidentialite/">Confidentialité</a></nav></div><div class="container footer-bottom"><span>© 2026 TJMCalc</span><a href="/">Ouvrir le calculateur</a></div></footer>
+  <script src="/assets/site.js" defer></script>
+<script type="module" src="/assets/tools.js"></script>
+</body>
+</html>

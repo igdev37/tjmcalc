@@ -1,0 +1,11 @@
+{
+  "name": "tjmcalc-static",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/render-pages.mjs && node scripts/validate-site.mjs",
+    "lint": "node scripts/validate-site.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "typecheck": "node --check assets/calculator.mjs && node --check assets/tools.js && node --check assets/site.js && node --check scripts/calculator-core.mjs && node --check scripts/seo-policy.mjs && node --check scripts/render-pages.mjs && node --check scripts/validate-site.mjs && node --check scripts/calculator-core.test.mjs && node --check scripts/seo-policy.test.mjs"
+  }
+}
